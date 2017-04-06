@@ -9,11 +9,11 @@ public class Menu
 		input = new Scanner(System.in);
 	}
 
-	public void prompt()
+	public int prompt()
 	{
 		System.out.println("\nWelcome to Twittify!\n");
 		System.out.println("Please choose an option:\n");
-		System.out.println("1 - Find most tweeted songs\n2 - Create playlist based on most tweeted songs\n");
+		System.out.println("1 - Search spotify for a track\n2 - Search spotify for an album\n3 - Search spotify for an artist");
 
 		String answer = input.nextLine();
 		boolean badAnswer = true;
@@ -25,12 +25,17 @@ public class Menu
 				case ("1"):
 					System.out.println("You chose option 1");
 					badAnswer = false;
-					break;
+					return 1;
 
 				case ("2"):
 					System.out.println("You chose option 2");
 					badAnswer = false;
-					break;
+					return 2;
+
+				case ("3"):
+					System.out.println("You chose option 2");
+					badAnswer = false;
+					return 3;
 
 				default:
 					System.out.println("\nInvalid answer, try again.\n");
@@ -38,5 +43,7 @@ public class Menu
 					break;
 			}
 		}
+
+		return 1;
 	}
 }

@@ -8,10 +8,3 @@ https://facebook.github.io/react-native/docs/getting-started.html<br>
 https://developer.spotify.com/web-api/user-guide/<br>
 https://developer.spotify.com/web-api/search-item/<br>
 https://developer.spotify.com/web-api/authorization-guide/<br>
-
-JSON<br>
-http://stackoverflow.com/questions/2591098/how-to-parse-json-in-java<br>
-http://jsonviewer.stack.hu/<br>
-
-JAR DOWNLOAD<br>
-http://mvnrepository.com/artifact/org.json/json/20160810
