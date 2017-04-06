@@ -1,20 +1,40 @@
 import java.util.*;
 import java.io.*;
 import java.io.InputStream;
-import org.json.*;
+//import org.json.JSONObject;
+//import org.json.JSONArray;
 
-
-//RETRIEVES A JSON FROM WEB API BASED ON SEARCH TERM
-public class spotify_groundwork {
+public class spotify_testing {
 
   public static void main(String[] args){
 
-    //We can modify this string based on the search terms
-    //options -- album, track, artist
-    //https://developer.spotify.com/web-api/search-item/
+    Scanner sinput = new Scanner(System.in);
+    System.out.println("Select a search type\n1. track\n2. artist\n3. album");
+    String i1 = sinput.nextLine();
 
-    String urltext = "https://api.spotify.com/v1/search?q=Sound+of+Silence&type=track";
+    String searchtype = "track";
+    switch (i1)
+    {
+      case ("1"):
+        break;
+      case ("2"):
+        searchtype = "artist";
+        break;
+      case ("3"):
+        searchtype = "album";
+      default:
+        break;
+    }
+
+    System.out.println("search:");
+    String i2 = sinput.nextLine();
+    String searchquery = i2.replaceAll(" ", "+");
+
+    String urltext = "https://api.spotify.com/v1/search?q=" + searchquery + "&type=" + searchtype;
     java.net.URL url = null;
+
+    System.out.println("RETRIVING JSON");
+
     try {
       url = new java.net.URL(urltext);
     }
@@ -45,43 +65,74 @@ public class spotify_groundwork {
         {
             s = reader.readLine();
             //PRINT ENTIRE JSON
-            //System.out.println(s);
             if (s != null)
-              entireJSON += s;
+            {
+                entireJSON += s;
+                System.out.println(s);
+            }
         }
     }
     catch (Exception e) {
         System.out.println("reader parsing error");
     }
 
-    //Create object containting all results
-    JSONObject APIresponse = new JSONObject(entireJSON);
-
-    //actual results one layer in for some reason
-    JSONObject tracks = APIresponse.getJSONObject("tracks");
-
-    //split search results into a JSON array
-    JSONArray items = tracks.getJSONArray("items");
-    //iterate through the array and display data on each result
-    for (int i = 0; i < items.length(); ++i)
-    {
-       String songname = items.getJSONObject(i).getString("name");
-       System.out.println(songname);
-    }
 
 
-    //JSONObject items = tracks.getJSONObject("items");
 
-    // JSONArray arr = APIresponse.getJSONArray("tracks");
-    // for (int i = 0; i < arr.length(); i++)
+    // if (searchtype == "track")
     // {
-    //     JSONObject tracks = arr.getJSONObject(i);
-    //     JSONArray items = tracks.getJSONArray("items");
-    //     for (int j = 0; j < items.length(); j++)
+    //   //Create object containting all results
+    //   JSONObject APIresponse = new JSONObject(entireJSON);
+    //
+    //   //actual results one layer in for some reason
+    //   JSONObject tracks = APIresponse.getJSONObject("tracks");
+    //
+    //   //split search results into a JSON array
+    //   JSONArray items = tracks.getJSONArray("items");
+    //
+    //   if (items.length() == 0)
+    //   {
+    //     System.out.println("No results found");
+    //   }
+    //
+    //   else{
+    //     for (int i = 0; i < items.length(); ++i)
     //     {
-    //         String test = items.getJSONObject(j).getString("type");
-    //         System.out.println(test);
+    //       System.out.println("------------------------");
+    //       //TRACK NAME
+    //       String songname = items.getJSONObject(i).getString("name");
+    //       System.out.println("Track title: " + songname);
+    //
+    //       //ARTIST(S)
+    //       JSONObject album = items.getJSONObject(i).getJSONObject("album");
+    //       JSONArray artists = album.getJSONArray("artists");
+    //       for (int j = 0; j < artists.length(); ++j)
+    //       {
+    //         String artistname = artists.getJSONObject(j).getString("name");
+    //         System.out.println("Artist: " + artistname);
+    //       }
+    //
+    //       // String songlength = items.getJSONObject(i).getString("duration_ms");
+    //       // System.out.println("Length: " + songlength.toString());
+    //
     //     }
+    //   }
     // }
+    //
+    // else if (searchtype == "artist")
+    // {
+    //   System.out.println("Working on it");
+    // }
+    //
+    // else if (searchtype == "album")
+    // {
+    //   System.out.println("Working on it");
+    // }
+    //
+    // else
+    // {
+    //   System.out.println("Invalid search type");
+    // }
+
   }
 }
