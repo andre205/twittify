@@ -20,17 +20,20 @@ public class spotify_groundwork {
         switch (searchoption)
         {
           case (1):
+            System.out.println("Enter a track name:");
             break;
           case (2):
             searchtype = "artist";
+            System.out.println("Enter an artist name:");
             break;
           case (3):
             searchtype = "album";
+            System.out.println("Enter an album name:");
           default:
+            System.out.println("Enter a track name:");
             break;
         }
 
-        System.out.println("search for:");
         String i2 = sinput.nextLine();
         String searchquery = i2.replaceAll(" ", "+");
 
