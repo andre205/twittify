@@ -4,6 +4,7 @@
 ### Run using: java -cp ".;json.jar" twittify
 (Include the current directory and external package for executable class files)
 
+---
 
 This application Implements Spotify and Twitter APIs to view tweets about songs, <br>
 and generates playlistS from the most tweeted songs of the day/week/year.
