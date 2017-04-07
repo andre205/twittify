@@ -5,8 +5,8 @@
 
 
 
-#### This application Implements Spotify and Twitter APIs to view tweets about songs, <br>
-#### AND generate playlistS from the most tweeted songs of the day/week/year.
+This application Implements Spotify and Twitter APIs to view tweets about songs, <br>
+and generates playlistS from the most tweeted songs of the day/week/year.
 
 Resources:<br>
 https://facebook.github.io/react-native/docs/getting-started.html<br>
