@@ -47,7 +47,7 @@ public class Menu
 		return 1;
 	}
 
-	/* CREATES MENU BASED ON ARGUMENTS AND RETURNS USER'S ANSWER */
+	/* CREATES NUMBER-BASED MENU BASED ON ARGUMENTS AND RETURNS USER'S ANSWER */
 	public int create(String prompt, int numOptions, String[] options)
 	{
 		int answer = 0;
@@ -80,6 +80,16 @@ public class Menu
 				System.exit(0);
 			}
 		}
+
+		return answer;
+	}
+
+	/* CREATES SINGLE-PROMPT MENU THAT ACCEPTS STRING RESPONSE AND RETURNS IT */
+	public String create(String prompt)
+	{
+		System.out.println(prompt);
+		Scanner input = new Scanner(System.in);
+		String answer = input.nextLine();
 
 		return answer;
 	}
