@@ -9,6 +9,7 @@ public class Menu
 		input = new Scanner(System.in);
 	}
 
+	//FIRST MENU ATTEMPT - NOT USED ANYMORE
 	public int prompt()
 	{
 		System.out.println("\nWelcome to Twittify!\n");
@@ -23,17 +24,17 @@ public class Menu
 			switch (answer.toLowerCase())
 			{
 				case ("1"):
-					System.out.println("You chose option 1");
+					System.out.println("You chose option 1 - track");
 					badAnswer = false;
 					return 1;
 
 				case ("2"):
-					System.out.println("You chose option 2");
+					System.out.println("You chose option 2 - artist");
 					badAnswer = false;
 					return 2;
 
 				case ("3"):
-					System.out.println("You chose option 2");
+					System.out.println("You chose option 3 - album");
 					badAnswer = false;
 					return 3;
 
@@ -43,7 +44,6 @@ public class Menu
 					break;
 			}
 		}
-
 		return 1;
 	}
 
