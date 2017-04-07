@@ -1,6 +1,4 @@
 # Project Twittify
-### To compile and run (Mac/Linux/Git Bash) use: ./run.sh
-Or
 ### Compile using:  javac -cp "json.jar" \*.java
 (The -cp tag adds the external JSON package to your compiler classpath)<br>
 ### Run using: java -cp ".;json.jar" twittify
