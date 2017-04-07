@@ -1,6 +1,6 @@
 # Project Twittify
-# Compile using  javac -cp "json.jar;" \*.java
-# Run using java twittify
+# Compile using:  javac -cp "json.jar;" \*.java
+# Run using: java twittify
 
 Implements Spotify and Twitter APIs to view tweets about songs.<br>
 Also, generate a playlist from the most tweeted songs of the day/week/year.
