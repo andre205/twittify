@@ -1,9 +1,7 @@
 /*
-  Spotify groundwork
+  Spotify groundwork - Utilized by main application - twittify.java
   This class queries the spotify web API for relevant information
-  pertaining to tracks, artists, and albums, and displays them to the user.
-
-  Utilized by main application - twittify.java
+  pertaining to tracks, artists, and albums, and displays them to the user.\
 
   @author Tyler Andrews
 */
