@@ -1,9 +1,5 @@
-/*Console application implementing both spotify and twitter APIs
-
-BEFORE COMPILING/RUNNING
-Follow instructions to add json-java to your JDK
-https://github.com/andre205/twittify/tree/master/development_environment_instruction
-
+/*
+Console application implementing both spotify and twitter APIs
 */
 
 import java.util.Scanner;
