@@ -1,4 +1,5 @@
 # Project Twittify - To run, compile all, run twittify.java
+# JSON package installation instructions found [here](https://github.com/andre205/twittify/tree/master/development_environment_instruction "Installation Instructions") 
 
 Implements Spotify and Twitter APIs to view tweets about songs.<br>
 Also, generate a playlist from the most tweeted songs of the day/week/year.
