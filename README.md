@@ -1,8 +1,8 @@
 # Project Twittify
 ### Compile using:  javac -cp "json.jar" \*.java
-(The -cp tag adds the external JSON package to your compiler class path)<br>
+(The -cp tag adds the external JSON package to your compiler classpath)<br>
 ### Run using: java -cp ".;json.jar" twittify
-
+(Include the current directory and external package for executable class files)
 
 
 This application Implements Spotify and Twitter APIs to view tweets about songs, <br>
