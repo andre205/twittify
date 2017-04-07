@@ -3,6 +3,8 @@
   This class query's the spotify web API for relevant information
   pertaining to tracks, artists, and albums, and displays them to the user.
 
+  Utilized by main application - twittify.java
+
   @author Tyler Andrews
 */
 
