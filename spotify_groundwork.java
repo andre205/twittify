@@ -5,11 +5,6 @@ import java.io.InputStream;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
-// import org.json.simple.JSONArray;
-// import org.json.simple.JSONObject;
-// import org.json.simple.parser.JSONParser;
-// import org.json.simple.parser.ParseException;
-
 public class spotify_groundwork {
 
     public spotify_groundwork()
@@ -88,17 +83,6 @@ public class spotify_groundwork {
         catch (Exception e) {
             System.out.println("reader parsing error");
         }
-
-
-        //JSON SIMPLE TESTING
-        // try{
-        //     JSONParser parser = new JSONParser();
-        //     Object obj = parser.parse(entireJSON);
-        //     JSONObject jsonObject = (JSONObject) obj;
-        // }
-        //
-        // catch(Exception e){
-        // }
 
 
         if (searchtype == "track")
