@@ -8,7 +8,7 @@ C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\ext
 Control panel->System properties->Environment variables->CLASSPATH<br>
 C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\ext\json-20160810.jar
 
-
+![alt text](https://github.com/andre205/twittify/blob/master/development_environment_instruction/classpath.png "Environment variables windows")
 
 
 Source<br>
