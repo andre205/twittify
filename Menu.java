@@ -13,7 +13,7 @@ public class Menu
 	{
 		System.out.println("\nWelcome to Twittify!\n");
 		System.out.println("Please choose an option:\n");
-		System.out.println("1 - Search Spotify for a track\n2 - Search Spotify for an album\n3 - Search Spotify for an artist");
+		System.out.println("1 - Search Spotify for a track\n2 - Search Spotify for an artist\n3 - Search Spotify for an album");
 
 		String answer = input.nextLine();
 		boolean badAnswer = true;

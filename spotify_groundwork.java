@@ -14,8 +14,6 @@ public class spotify_groundwork {
     public static void getJSON(int searchoption){
 
         Scanner sinput = new Scanner(System.in);
-        //System.out.println("Select a search type\n1. track\n2. artist\n3. album");
-        //String i1 = sinput.nextLine();
 
         String searchtype = "track";
         switch (searchoption)
@@ -31,7 +29,6 @@ public class spotify_groundwork {
             searchtype = "album";
             System.out.println("Enter an album name:");
           default:
-            System.out.println("Enter a track name:");
             break;
         }
 
@@ -89,22 +86,22 @@ public class spotify_groundwork {
 
         if (searchtype == "track")
         {
-          //Create object containting all results
-          JSONObject APIresponse = new JSONObject(entireJSON);
+            //Create object containting all results
+            JSONObject APIresponse = new JSONObject(entireJSON);
 
-          //actual results one layer in for some reason
-          JSONObject tracks = APIresponse.getJSONObject("tracks");
+            //actual results one layer in for some reason
+            JSONObject tracks = APIresponse.getJSONObject("tracks");
 
-          //split search results into a JSON array
-          JSONArray items = tracks.getJSONArray("items");
+            //split search results into a JSON array
+            JSONArray items = tracks.getJSONArray("items");
 
-          if (items.length() == 0)
-          {
-              System.out.println("No results found");
-          }
+            if (items.length() == 0)
+            {
+                System.out.println("No results found");
+            }
 
+            else{
 
-          else{
                 System.out.println(items.length() + " results found");
 
                 for (int i = 0; i < items.length(); ++i)
@@ -126,17 +123,88 @@ public class spotify_groundwork {
                     int songlength = items.getJSONObject(i).getInt("duration_ms");
                     System.out.println("Length: " + songlength/1000 + " seconds");
                 }
-          }
+            }
         }
 
         else if (searchtype == "artist")
         {
-          System.out.println("Working on it");
+          //Create object containting all results
+          JSONObject APIresponse = new JSONObject(entireJSON);
+
+          //actual results one layer in for some reason
+          JSONObject artists = APIresponse.getJSONObject("artists");
+
+          //split search results into a JSON array
+          JSONArray items = artists.getJSONArray("items");
+
+          if (items.length() == 0)
+          {
+              System.out.println("No results found");
+          }
+
+          else{
+
+              System.out.println(items.length() + " results found");
+
+              for (int i = 0; i < items.length(); ++i)
+              {
+                System.out.println("------------------------");
+                //ARTIST NAME
+                String artistname = items.getJSONObject(i).getString("name");
+                System.out.println("Artist name: " + artistname);
+
+                //FOLLOWERS
+                int followers = items.getJSONObject(i).getJSONObject("followers").getInt("total");
+                System.out.println("Followers: " + followers);
+
+                //GENRES
+                JSONArray genres = items.getJSONObject(i).getJSONArray("genres");
+                for (int j = 0; j < genres.length(); ++j)
+                {
+                      String genre = genres.getString(j);
+                      System.out.println("Genre: " + genre);
+                }
+              }
+          }
         }
 
         else if (searchtype == "album")
         {
-          System.out.println("Working on it");
+          //Create object containting all results
+          JSONObject APIresponse = new JSONObject(entireJSON);
+
+          //actual results one layer in for some reason
+          JSONObject albums = APIresponse.getJSONObject("albums");
+
+          //split search results into a JSON array
+          JSONArray items = albums.getJSONArray("items");
+
+          if (items.length() == 0)
+          {
+              System.out.println("No results found");
+          }
+
+          else
+          {
+
+              System.out.println(items.length() + " results found");
+
+              for (int i = 0; i < items.length(); ++i)
+              {
+                  System.out.println("------------------------");
+                  //ALBUM NAME
+                  String albumname = items.getJSONObject(i).getString("name");
+                  System.out.println("Album name: " + albumname);
+
+                  //ARTISTS
+                  JSONArray artists = items.getJSONObject(i).getJSONArray("artists");
+                  for (int j = 0; j < artists.length(); ++j)
+                  {
+                        String artistname = artists.getJSONObject(j).getString("name");
+                        System.out.println("Artist: " + artistname);
+                  }
+              }
+          }
         }
 
         else
