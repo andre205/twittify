@@ -1,7 +1,7 @@
 # Project Twittify
 ### Compile using:  javac -cp "json.jar" \*.java
 (The -cp tag adds the external JSON package to your compiler class path)<br>
-### Run using: java twittify
+### Run using: java -cp ".;json.jar" twittify
 
 
 
