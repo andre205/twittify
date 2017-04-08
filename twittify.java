@@ -12,7 +12,7 @@ public class twittify{
 
         //Display and retrieve user search option
         String[] searchoptions = {"track","artist","album"};
-        int user_option = menu.create("Search spotify for a", 3, searchoptions);
+        int user_option = menu.create("Search spotify for a", searchoptions);
 
         //MOVE THIS TO MENU CLASS EVENTUALLY
         //Retrieve user search term

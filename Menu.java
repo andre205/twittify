@@ -1,5 +1,5 @@
 /**
- * Menu class that is used to create on-screen menus that allow user input.
+ * Menu class that is used to create on-screen menus that allow for user input.
  * Their input is returned by the method to be used in a search query.
  *
  * @author Vince Carpino
@@ -51,7 +51,7 @@ public class Menu
 	}
 
 	/* CREATES NUMBER-BASED MENU BASED ON ARGUMENTS AND RETURNS USER'S ANSWER */
-	public int create(String prompt, int numOptions, String[] options)
+	public int create(String prompt, String[] options)
 	{
 		int answer = 0;
 		boolean badAnswer = true;
@@ -59,7 +59,7 @@ public class Menu
 
 		System.out.println(prompt);
 
-		for (int i = 0; i < numOptions; ++i)
+		for (int i = 0; i < options.length; ++i)
 		{
 			System.out.println((i+1) + " - " + options[i]);
 		}
@@ -70,7 +70,7 @@ public class Menu
 			{
 				answer = input.nextInt();
 
-				if (answer >= 1 && answer <= numOptions)
+				if (answer >= 1 && answer <= options.length)
 				{
 					badAnswer = false;
 				}
