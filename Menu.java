@@ -11,7 +11,7 @@ public class Menu
 {
 	public Menu(){};
 
-	//FIRST MENU ATTEMPT - NOT USED ANYMORE
+	/* FIRST MENU ATTEMPT - NOT USED ANYMORE */
 	public int prompt()
 	{
 		System.out.println("\nWelcome to Twittify!\n");
