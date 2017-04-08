@@ -1,13 +1,15 @@
+/**
+ * Menu class that is used to create on-screen menus that allow user input.
+ * Their input is returned by the method to be used in a search query.
+ *
+ * @author Vince Carpino
+ */
+
 import java.util.Scanner;
 
 public class Menu
 {
-	private Scanner input;
-
-	public Menu()
-	{
-		input = new Scanner(System.in);
-	}
+	public Menu(){};
 
 	//FIRST MENU ATTEMPT - NOT USED ANYMORE
 	public int prompt()
@@ -16,6 +18,7 @@ public class Menu
 		System.out.println("Please choose an option:\n");
 		System.out.println("1 - Search Spotify for a track\n2 - Search Spotify for an artist\n3 - Search Spotify for an album");
 
+		Scanner input = new Scanner(System.in);
 		String answer = input.nextLine();
 		boolean badAnswer = true;
 
@@ -52,6 +55,7 @@ public class Menu
 	{
 		int answer = 0;
 		boolean badAnswer = true;
+		Scanner input = new Scanner(System.in);
 
 		System.out.println(prompt);
 
