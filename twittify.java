@@ -2,7 +2,8 @@
 Console application implementing both spotify and twitter APIs
 */
 
-import java.util.Scanner;
+import org.json.JSONObject;
+import org.json.JSONArray;
 
 public class twittify{
     public static void main(String[] args)
@@ -14,13 +15,15 @@ public class twittify{
         String[] searchoptions = {"track","artist","album"};
         int user_option = menu.create("Search spotify for a", searchoptions);
 
-        //MOVE THIS TO MENU CLASS EVENTUALLY
         //Retrieve user search term
-        System.out.println("Enter a search term: ");
-        Scanner input = new Scanner(System.in);
-        String user_searchterm = input.nextLine();
+        String user_searchterm = menu.create("Enter a search term: ");
 
         //Query Spotify API for results and print
-        sg.getJSON(user_option, user_searchterm);
+        sg.print_spotify_search(user_option, user_searchterm);
+
+
+        //Or return JSON object and print that separately (for use later with twitter implemented)
+        //JSONObject test = sg.return_spotify_search(user_option, user_searchterm);
+        //sg.print_spotify_JSON(test);
     }
 }
