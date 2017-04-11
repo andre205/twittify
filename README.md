@@ -1,10 +1,10 @@
 # Project Twittify
-### Compile and run using: ./run.sh
-If permission is denied, type the following command: chmod +x run.sh
-### Or Compile using:  javac -cp "json.jar" \*.java
+### Compile using:  javac -cp "json.jar" \*.java
 (The -cp tag adds the external JSON package to your compiler classpath)<br>
-### And Run using: java -cp ".;json.jar" twittify (Mac/linux use ".:json.jar")
+### Run using: java -cp ".;json.jar" twittify (Mac/linux use ".:json.jar")
 (Include the current directory and external package for executable class files)
+### Or, in GIT Bash, Compile and run using: ./run.sh
+If permission is denied, type the following command: chmod +x run.sh
 
 ---
 
