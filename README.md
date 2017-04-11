@@ -1,11 +1,14 @@
 # Project Twittify
-### Compile using:  javac -cp "json.jar" \*.java
-(The -cp tag adds the external JSON package to your compiler classpath)<br>
-### Run using: java -cp ".;json.jar" twittify    NOTE: (Mac/linux use ".:json.jar")
-(Include the current directory and external package for executable class files)
-### Or, in GIT Bash, compile and run using: ./run.sh
-### On Mac, compile and run using: ./mac.sh
+### In GIT Bash, compile and run using: ./run.sh
+### Or on Mac, compile and run using: ./mac.sh
 If permission is denied, type the following command: chmod +x run.sh
+
+---
+
+### Otherwise compile using:  javac -cp "json.jar" \*.java
+(The -cp tag adds the external JSON package to your compiler classpath)<br>
+### And run using: java -cp ".;json.jar" twittify    NOTE: (Mac/linux use ".:json.jar")
+(Include the current directory and external package for executable class files)
 
 ---
 
