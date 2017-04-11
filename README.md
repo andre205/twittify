@@ -3,8 +3,9 @@
 (The -cp tag adds the external JSON package to your compiler classpath)<br>
 ### Run using: java -cp ".;json.jar" twittify
 (Include the current directory and external package for executable class files)
-### Or, in GIT Bash, compile and run using: ./run.sh  (Unix use: ./runUNIX.sh)
-If permission is denied, type the following command: chmod +x run.sh     (chmod +x runUNIX.sh)
+### Or, in GIT Bash, compile and run using: ./run.sh (Unix use: ./runUNIX.sh)
+If permission is denied, type the following command: chmod +x run.sh (Unix use: chmod +x runUNIX.sh)
+
 ---
 
 This application Implements Spotify and Twitter APIs to view tweets about songs, <br>
