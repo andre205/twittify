@@ -1,5 +1,4 @@
-# Project Twittify
-## INSTRUCTIONS
+# Project Twittify -- Compiling Instructions
 ### PC
 #### In GIT Bash, compile and run using: ./run.sh
 If permission is denied, type the following command: chmod +x run.sh
@@ -8,14 +7,14 @@ If permission is denied, type the following command: chmod +x run.sh
 
 ### Mac/Linux
 #### Compile and run in terminal using: ./mac.sh
-If permission is denied, type the following command: chmod +x run.sh
+If permission is denied, type the following command: chmod +x mac.sh
 
 ---
 
 ### Manually
 #### Compile using:  javac -cp "json.jar" \*.java
-#### PC: run using: java -cp ".;json.jar" twittify
-#### Mac/Linux using: java -cp ".:json.jar" twittify
+#### PC - run using: java -cp ".;json.jar" twittify
+#### Mac/Linux - run using: java -cp ".:json.jar" twittify
 
 ---
 
