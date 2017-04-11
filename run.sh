@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo Twittify
 javac -cp "json.jar" *.java
 
