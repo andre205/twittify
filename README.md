@@ -1,4 +1,4 @@
-# Project Twittify -- Compiling Instructions
+# Project Twittify -- Running Instructions
 ### PC
 #### In GIT Bash, compile and run using: ./run.sh
 If permission is denied, type the following command: chmod +x run.sh
