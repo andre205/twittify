@@ -1,9 +1,17 @@
 echo Twittify
-echo Compiling...
 javac -cp "json.jar" *.java
-#If semicolon style fails, try colon style for mac/linux
-echo -n "Attempting to run (GIT Bash): "
-java -cp ".;json.jar" twittify || {
-echo -e "\rAttempting to run (Mac/Linux)"
-java -cp ".:json.jar" twittify
-}
+
+#Detect OS and run accordingly
+if [ "$(uname)" == "Darwin" ]; then
+    java -cp ".:json.jar" twittify
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    java -cp ".:json.jar" twittify
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    java -cp ".;json.jar" twittify
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    java -cp ".;json.jar" twittify
+fi
+
+
+#I found Found the OS detection code here
+#http://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux
