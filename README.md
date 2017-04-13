@@ -11,7 +11,7 @@ If permission is denied, type the following command: chmod +x mac.sh
 
 ---
 
-### Manually
+### Manually from within src folder
 #### Compile using: javac -cp "json.jar" \*.java
 #### PC run using: java -cp ".;json.jar" twittify
 #### Mac/Linux run using: java -cp ".:json.jar" twittify
