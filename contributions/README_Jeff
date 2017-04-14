@@ -13,5 +13,4 @@ Work done:
           3) Helped design application structure to be integrated with GUI
 
 Goals:
-          1) Completely integrate the Twitter class with the spotify class
-          2) Implement the two classes into a single class and use with GUI
+          1) Implement the two classes into a single class and match with GUI
