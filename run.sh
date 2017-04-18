@@ -1,3 +1,3 @@
 cd src
-javac -cp ".;json/json.jar" *.java
-java -cp ".;json/json.jar" twittify
+javac -cp ".;main;groundwork;packages/json/json.jar" main/*.java
+java -cp ".;main;groundwork;packages/json/json.jar" twittify
