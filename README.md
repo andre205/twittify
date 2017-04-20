@@ -12,6 +12,7 @@ If permission is denied, type the following command: chmod +x mac.sh
 ---
 
 ### Manually from within src folder
+#### THIS IS NOT UP TO DATE I'LL UPDATE IT LATER - COPY THE RUN.SH FILE
 #### Compile using: javac -cp ".;json/json.jar;csv/commons-csv-1.4.jar;" \*.java
 #### PC run using: java -cp ".;json/json.jar;csv/commons-csv-1.4.jar" twittify
 #### Mac/Linux run using: java -cp ".:json/json.jar:csv/commons-csv-1.4.jar" twittify
