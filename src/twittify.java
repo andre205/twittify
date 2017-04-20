@@ -11,21 +11,20 @@ public class twittify{
         Menu menu = new Menu();
         spotify_groundwork sg = new spotify_groundwork();
 
-
         //Display and retrieve user search option
         String[] searchoptions = {"a track","an artist","an album","the top 200"};
         int user_option = menu.create("Search spotify for", searchoptions);
 
         if (user_option == 4)
         {
-          spotify_chart_fetcher scf = new spotify_chart_fetcher();
-          String[] top200 = scf.getTop200();
+            spotify_chart_fetcher scf = new spotify_chart_fetcher();
+            String[] top200 = scf.getTop200();
 
-          System.out.println("Spotify Top 200");
-          for (int i = 0; i < 200; ++i)
-          {
-              System.out.println((i+1) + ": " + top200[i]);
-          }
+            System.out.println("Spotify Top 200");
+            for (int i = 0; i < 200; ++i)
+            {
+                System.out.println((i+1) + ": " + top200[i]);
+            }
         }
 
         else

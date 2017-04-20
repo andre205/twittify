@@ -1,6 +1,7 @@
 /*
   Gets top 200 songs on spotify and returns them as an array of strings
-
+	spotifycharts.com
+	
   @author Tyler Andrews
 */
 
