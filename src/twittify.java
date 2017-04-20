@@ -11,55 +11,53 @@ public class twittify {
 
     public static void main (String[] args) throws Exception
     {
+        //CREATE NEW INSTANCES OF REQUIRED CLASSES
         Menu menu = new Menu();
         spotify_groundwork sg = new spotify_groundwork();
+        twitter_groundwork tg = new twitter_groundwork();
+        spotify_chart_fetcher scf = new spotify_chart_fetcher();
+        //
 
-        //Display and retrieve user search option
+        //DISPLAY AND READ USER SEARCH OPTIONS
         String[] searchoptions = {"a track","an artist","an album","the top 200"};
         int user_option = menu.create("Search spotify for", searchoptions);
+        //
 
+        //CHOOSE NUMBER 4 OR DIE
         if (user_option == 4)
         {
-            spotify_chart_fetcher scf = new spotify_chart_fetcher();
-            String[] top200 = scf.getTop200();
-            //putting the name and result into table
-            //format so that they can be indexed by number(String)
+            //CREATE NEW INSTANCES OF DISPLAY ARRAY AND INDEX TABLE
+            String[] top200 = scf.getTop200();//POPULATE ARRAY
             List<String[]> top200table = new LinkedList<String[]>();
-            for(int i = 0; i < 200; ++i)
-            {
-                top200table.add(new String[] {String.valueOf(i+1),top200[i]});
-            }
 
+            //DISPLAY TOP 200
             System.out.println("Spotify Top 200");
             for (int i = 0; i < 200; ++i)
             {
+                //POPULATE INDEXE TABLE
+                top200table.add(new String[] {String.valueOf(i+1),top200[i]});
+                //PRINT SONGS
                 System.out.println((i+1) + ": " + top200[i]);
             }
 
-            //Jeff remake this using menu.create
-            //int songnum = menu.create("Enter a song number to pull up most recent related tweets!", top200);
-
-            //FETCH TWEETS
-            System.out.println("\nEnter song number to pull up most recent " +
-                                                            "related tweets!");
-
-            String input1 = new java.util.Scanner(System.in).nextLine();
+            //USER INPUT CHOICE
+            String songnum = menu.create("Enter a song number to pull up most recent related tweets!");
             for (String[] a : top200table)
             {
-
-                if(a[0].equals(input1))
+                //FINDS SONG CORRESPONDING TO USER INPUT
+                if(a[0].equals(songnum))
                 {
                   System.out.println("----TWEETS----\n");
-                  twitter_groundwork instance = new twitter_groundwork();
-
-                  for(String b : instance.search(a[1]))
+                  //DISPLAY ALL TWEETS
+                  for(String b : tg.search(a[1]))
                   {
                       System.out.println(b+"\n");
                   }
-                  //String input2 = new java.util.Scanner(System.in).nextLine();
+                  //SYSTEM PAUSE
+                  System.out.println("Enter any button to quit");
+                  String input2 = new java.util.Scanner(System.in).nextLine();
                 }
             }
-            //String input3 = new java.util.Scanner(System.in).nextLine();
         }
 
         else

@@ -80,7 +80,7 @@ public class Menu
 					System.out.println("Invalid answer, try again.");
 				}
 			} catch (Exception e) {
-				System.out.println("You're an idiot.");
+				System.out.println("Read the instructions dude.");
 				System.exit(0);
 			}
 		}
@@ -94,7 +94,6 @@ public class Menu
 		System.out.println(prompt);
 		Scanner input = new Scanner(System.in);
 		String answer = input.nextLine();
-
 		return answer;
 	}
 }
