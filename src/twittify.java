@@ -11,19 +11,36 @@ public class twittify{
         Menu menu = new Menu();
         spotify_groundwork sg = new spotify_groundwork();
 
+
         //Display and retrieve user search option
-        String[] searchoptions = {"track","artist","album"};
-        int user_option = menu.create("Search spotify for a", searchoptions);
+        String[] searchoptions = {"a track","an artist","an album","the top 200"};
+        int user_option = menu.create("Search spotify for", searchoptions);
 
-        //Retrieve user search term
-        String user_searchterm = menu.create("Enter a search term: ");
+        if (user_option == 4)
+        {
+          spotify_chart_fetcher scf = new spotify_chart_fetcher();
+          String[] top200 = scf.getTop200();
 
-        //Query Spotify API for results and print
-        sg.print_spotify_search(user_option, user_searchterm);
+          System.out.println("Spotify Top 200");
+          for (int i = 0; i < 200; ++i)
+          {
+              System.out.println((i+1) + ": " + top200[i]);
+          }
+        }
+
+        else
+        {
+          //Retrieve user search term
+          String user_searchterm = menu.create("Enter a search term: ");
+
+          //Query Spotify API for results and print
+          sg.print_spotify_search(user_option, user_searchterm);
 
 
-        //Or return JSON object and print that separately (for use later with twitter implemented)
-        //JSONObject test = sg.return_spotify_search(user_option, user_searchterm);
-        //sg.print_spotify_JSON(test);
+          //Or return JSON object and print that separately (for use later with twitter implemented)
+          //JSONObject test = sg.return_spotify_search(user_option, user_searchterm);
+          //sg.print_spotify_JSON(test);
+        }
+
     }
 }
