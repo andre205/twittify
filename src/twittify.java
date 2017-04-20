@@ -27,15 +27,22 @@ public class twittify {
             List<String[]> top200table = new LinkedList<String[]>();
             for(int i = 0; i < 200; ++i)
             {
-              top200table.add(new String[] {String.valueOf(i+1),top200[i]});
+                top200table.add(new String[] {String.valueOf(i+1),top200[i]});
             }
+
             System.out.println("Spotify Top 200");
             for (int i = 0; i < 200; ++i)
             {
                 System.out.println((i+1) + ": " + top200[i]);
             }
+
+            //Jeff remake this using menu.create
+            //int songnum = menu.create("Enter a song number to pull up most recent related tweets!", top200);
+
+            //FETCH TWEETS
             System.out.println("\nEnter song number to pull up most recent " +
                                                             "related tweets!");
+
             String input1 = new java.util.Scanner(System.in).nextLine();
             for (String[] a : top200table)
             {
@@ -47,12 +54,12 @@ public class twittify {
 
                   for(String b : instance.search(a[1]))
                   {
-                    System.out.println(b+"\n");
+                      System.out.println(b+"\n");
                   }
-                  String input2 = new java.util.Scanner(System.in).nextLine();
+                  //String input2 = new java.util.Scanner(System.in).nextLine();
                 }
             }
-            String input3 = new java.util.Scanner(System.in).nextLine();
+            //String input3 = new java.util.Scanner(System.in).nextLine();
         }
 
         else
