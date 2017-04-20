@@ -5,7 +5,7 @@ import org.json.JSONArray;
 
 public class twitter_groundwork {
 
-  public class twitter_groundwork() {
+  public twitter_groundwork () {
 
   }
 
