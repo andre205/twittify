@@ -28,6 +28,7 @@ https://developer.spotify.com/web-api/user-guide/<br>
 https://developer.spotify.com/web-api/search-item/<br>
 https://developer.spotify.com/web-api/authorization-guide/<br>
 https://commons.apache.org/proper/commons-csv/user-guide.html<br>
+https://dev.twitter.com/rest/reference/get/search/tweets<br>
 
 JSON Package Source<br>
 https://github.com/stleary/JSON-java<br>
