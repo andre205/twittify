@@ -297,7 +297,7 @@ public class SpotterGO extends Application
 		GridPane.setConstraints(inputField, 1, 1);
 
 		Button searchButton = new Button("SpotterGO!");
-		searchButton.setOnAction(e -> window.setScene(scene3)); // TAKE TEXTFIELD DATA FROM HERE
+		searchButton.setOnAction(e -> window.setScene(scene3)); // TAKE TEXTFIELD DATA FROM HERE USING .getText()
 		GridPane.setConstraints(searchButton, 2, 1);
 
 		layout2.getChildren().addAll(inputLabel, inputField, searchButton);
