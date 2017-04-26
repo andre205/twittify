@@ -1,3 +1,49 @@
-.background {
-	-fx-background-color: #1d1d1d;
+@font-face {
+	font-family: 'Nunito-SemiBold';
+	src: url('Nunito-SemiBold.ttf');
+}
+
+* {
+	-fx-font-family: Nunito;
+}
+
+#twitterButton {
+	-fx-background-color: transparent;
+	-fx-text-fill: transparent;
+	-fx-pref-width: 500;
+	-fx-pref-height: 600;
+	-fx-transition: -fx-opacity 1s;
+}
+
+#twitterButton:hover {
+	-fx-background-color: #1DCAFF;
+	-fx-text-fill: white;
+}
+
+#twitterButton:pressed {
+	-fx-background-color: #17A3CF;
+}
+
+#spotifyButton {
+	-fx-background-color: transparent;
+	-fx-text-fill: transparent;
+	-fx-pref-width: 500;
+	-fx-pref-height: 600;
+	-fx-transition: -fx-opacity 1s;
+}
+
+#spotifyButton:hover {
+	-fx-background-color: #1ED760;
+	-fx-text-fill: white;
+}
+
+#spotifyButton:pressed {
+	-fx-background-color: #16AC4C;
+}
+
+#titleLabel {
+	-fx-position: relative;
+	-fx-left: 150px;
+	-fx-top: 100px;
+	-fx-font-size: 100;
 }

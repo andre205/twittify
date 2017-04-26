@@ -8,9 +8,9 @@ JVM = java
 		$(JC) $(JFLAGS) $*.java
 
 CLASSES = \
-		SpotterGO.java
+		GUI.java
 
-MAIN = SpotterGO
+MAIN = GUI
 
 default: classes
 
