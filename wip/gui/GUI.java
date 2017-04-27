@@ -77,7 +77,7 @@ public class GUI extends Application
 		welcomeScene = new Scene(welcomeLayout);
 		welcomeScene.getStylesheets().add("styleSheet.css");
 
-		// // SPOTIFY SCENE
+		// SPOTIFY SCENE
 		// LEFT BUTTONS
 		Button trackButton = new Button("Search Track");
 		trackButton.setId("trackButton");
@@ -160,34 +160,40 @@ public class GUI extends Application
 
 		// BUTTON ACTIONS (AFFECT MAIN DISPLAY BOX)
 		// CLEAR CHILDREN, UPDATE LABEL, ADD LABEL AND INPUT BOX TO MAIN DISPLAY BOX
-		trackButton.addEventHandler(ActionEvent.ACTION, (e)-> {
-				mainDisplayBox.getChildren().clear();
-				spotifyInputFieldLabel.setText("Enter a track name");
-				mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, trackInputField);
-		});
+		trackButton.setOnAction( e -> {
+			mainDisplayBox.getChildren().clear();
+			spotifyInputFieldLabel.setText("Enter a track name");
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, trackInputField);
 
-		artistButton.addEventHandler(ActionEvent.ACTION, (e)-> {
-				mainDisplayBox.getChildren().clear();
-				spotifyInputFieldLabel.setText("Enter an artist name");
-				mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, artistInputField);
-		});
+			mainDisplayBox2.getChildren().clear();
+		} );
 
-		albumButton.addEventHandler(ActionEvent.ACTION, (e)-> {
-				mainDisplayBox.getChildren().clear();
-				spotifyInputFieldLabel.setText("Enter an album name");
-				mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, albumInputField);
-		});
+		artistButton.setOnAction( e -> {
+			mainDisplayBox.getChildren().clear();
+			spotifyInputFieldLabel.setText("Enter an artist name");
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, artistInputField);
 
-		top20Button.addEventHandler(ActionEvent.ACTION, (e)-> {
-				mainDisplayBox.getChildren().clear();
-				// fetch top 20 here
-				// String[] top20 = {"1","2","skip a few","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","20"};
-				//top20List.getItems().addAll((Object[])top20);
-				mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20_1, top20_2, top20_3, top20_4, top20_5, top20_6, top20_7, top20_8, top20_9, top20_10);
+			mainDisplayBox2.getChildren().clear();
+		} );
 
-				mainDisplayBox2.getChildren().clear();
-				mainDisplayBox2.getChildren().addAll(top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
-		});
+		albumButton.setOnAction( e -> {
+			mainDisplayBox.getChildren().clear();
+			spotifyInputFieldLabel.setText("Enter an album name");
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, albumInputField);
+
+			mainDisplayBox2.getChildren().clear();
+		} );
+
+		top20Button.setOnAction( e -> {
+			mainDisplayBox.getChildren().clear();
+			// fetch top 20 here
+			// String[] top20 = {"1","2","skip a few","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","20"};
+			//top20List.getItems().addAll((Object[])top20);
+			mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20_1, top20_2, top20_3, top20_4, top20_5, top20_6, top20_7, top20_8, top20_9, top20_10);
+
+			mainDisplayBox2.getChildren().clear();
+			mainDisplayBox2.getChildren().addAll(top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
+		} );
 
 		// ADD MAIN DISPLAY BOX TO LAYOUT
 		spotifyLayout.add(mainDisplayBox, 1, 0);
