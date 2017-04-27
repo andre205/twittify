@@ -16,12 +16,10 @@ public class twittify {
         spotify_groundwork sg = new spotify_groundwork();
         twitter_groundwork tg = new twitter_groundwork();
         spotify_chart_fetcher scf = new spotify_chart_fetcher();
-        //
 
         //DISPLAY AND READ USER SEARCH OPTIONS
         String[] searchoptions = {"a track","an artist","an album","the top 20"};
         int user_option = menu.create("Search spotify for", searchoptions);
-        //
 
         //CHOOSE NUMBER 4 OR DIE
         if (user_option == 4)
@@ -67,7 +65,6 @@ public class twittify {
 
           //Query Spotify API for results and print
           sg.print_spotify_search(user_option, user_searchterm);
-
 
           //Or return JSON object and print that separately (for use later with twitter implemented)
           //JSONObject test = sg.return_spotify_search(user_option, user_searchterm);
