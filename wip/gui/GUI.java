@@ -265,11 +265,16 @@ public class GUI extends Application
 		twitterBackButton.setId("twitterBackButton");
 
 		GridPane twitterLayout = new GridPane();
+		HBox twitterSearchBox = new HBox(10);
+		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
 		twitterLayout.add(twitterSearchLabel, 0, 0); // MOVE EVERYTHING TO CENTER
-		twitterLayout.add(twitterSearchField, 0, 1);
-		twitterLayout.add(twitterSearchButton, 1, 1);
+		// twitterLayout.add(twitterSearchBox, 0, 1);
+		// twitterLayout.add(twitterSearchButton, 1, 1);
+		twitterLayout.add(twitterSearchBox, 0, 1);
 		twitterLayout.add(twitterBackButton, 2, 0);
 		twitterLayout.setId("twitterLayout");
+
+		twitterLayout.setAlignment(Pos.CENTER);
 
 		twitterScene = new Scene(twitterLayout);
 		twitterScene.getStylesheets().add("styleSheet.css");
