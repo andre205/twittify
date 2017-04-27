@@ -1,10 +1,9 @@
 @font-face {
-	font-family: 'Nunito';
-	src: url('/Fonts/Nunito-SemiBold.ttf');
+	src: url("Nunito-SemiBold.ttf");
 }
 
 * {
-	-fx-font-family: 'Nunito';
+	-fx-font-family: 'Nunito Semibold';
 }
 
 #titleLabel {
