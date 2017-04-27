@@ -1,20 +1,20 @@
 # Project Twittify -- Running Instructions
 ### PC
-#### In GIT Bash, compile and run using: ./run.sh
-If permission is denied, type the following command: chmod +x run.sh
+#### In GIT Bash, compile and run using: ```./run.sh```
+If permission is denied, type the following command: ```chmod +x run.sh```
 
 ---
 
 ### Mac/Linux
-#### Compile and run in terminal using: ./mac.sh
-If permission is denied, type the following command: chmod +x mac.sh
+#### Compile and run in terminal using: ```./mac.sh```
+If permission is denied, type the following command: ```chmod +x mac.sh```
 
 ---
 
 ### Manually from within src folder
-#### Compile using: javac -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" \*.java
-#### PC run using: java -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" twittify
-#### Mac/Linux run using: java -cp ".:json/json.jar:csv/commons-csv-1.4.jar:twitter4j/twitter4j-core-4.0.4.jar" twittify
+#### Compile using: ```javac -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" \*.java```
+#### PC run using: ```java -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" twittify```
+#### Mac/Linux run using: ```java -cp ".:json/json.jar:csv/commons-csv-1.4.jar:twitter4j/twitter4j-core-4.0.4.jar" twittify```
 
 ---
 
