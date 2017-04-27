@@ -35,6 +35,7 @@ public class GUI extends Application
 		Label titleLabel = new Label("TWITTIFY");
 		titleLabel.setId("titleLabel");
 		titleLabel.setMouseTransparent(true);
+		//titleLabel.setStyle("-fx-font-family: Nunito; -fx-font-size: 100;");
 
 		// TWITTER BUTTON IMAGES
 		Image twitterLogoGray = new Image("twitterLogoGray.png");

@@ -1,16 +1,17 @@
 @font-face {
 	font-family: 'Nunito';
-	src: url('./Nunito-SemiBold.ttf');
+	src: url('/Fonts/Nunito-SemiBold.ttf');
 }
 
 * {
-	-fx-font-family: Nunito;
+	-fx-font-family: 'Nunito';
 }
 
 #titleLabel {
 	-fx-font-size: 100;
 	-fx-translate-x: -258;
 	-fx-translate-y: -185;
+	-fx-font-family: Nunito;
 }
 
 #twitterButton, #spotifyButton {
@@ -46,10 +47,10 @@
 	-fx-font-size: 24;
 	-fx-text-fill: black;
 	-fx-pref-width: 250;
-	-fx-pref-height: 140;
+	-fx-pref-height: 150;
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-color: black;
-	-fx-border-width: 1px;
+	-fx-border-width: .5px;
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
 }
