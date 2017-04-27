@@ -62,7 +62,7 @@
 		-fx-background-color: #1ED760;
 		-fx-font-size: 24;
 		-fx-text-fill: black;
-		-fx-pref-width: 700;
+		-fx-pref-width: 350;
 		-fx-pref-height: 600;
 		/*-fx-transition: -fx-opacity 1s;*/
 		-fx-border-radius: 0 0 0 0;
@@ -74,7 +74,6 @@
 	-fx-font-size: 12;
 	/*this rotates the whole button not just the text*/
 	/*-fx-rotate: -90;*/
-
 	-fx-text-fill: black;
 	-fx-pref-width: 50;
 	-fx-pref-height: 600;
@@ -87,4 +86,15 @@
 
 #backButton:hover {
 	-fx-background-color: #FFFFFF;
+}
+
+#top20TweetButton {
+	-fx-background-color: #1ED760;
+	-fx-pref-width: 300;
+	-fx-pref-height: 40;
+	-fx-font-size: 16;
+}
+
+#top20TweetButton:hover {
+	-fx-background-color: #16AC4C;
 }

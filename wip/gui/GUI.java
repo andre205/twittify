@@ -35,7 +35,6 @@ public class GUI extends Application
 		Label titleLabel = new Label("TWITTIFY");
 		titleLabel.setId("titleLabel");
 		titleLabel.setMouseTransparent(true);
-		//titleLabel.setStyle("-fx-font-family: Nunito; -fx-font-size: 100;");
 
 		// TWITTER BUTTON IMAGES
 		Image twitterLogoGray = new Image("twitterLogoGray.png");
@@ -98,9 +97,11 @@ public class GUI extends Application
 		// ADD CHOICE BOX TO LAYOUT
 		spotifyLayout.add(choicesBox, 0, 0);
 
-		// CENTER DISPLAY BOX OF MAIN APPLICATION ELEMENTS
+		// CENTER DISPLAY BOX OF MAIN APPLICATION ELEMENTS (Divided in two)
 		VBox mainDisplayBox = new VBox();
 		mainDisplayBox.setId("mainDisplayBox");
+		VBox mainDisplayBox2 = new VBox();
+		mainDisplayBox2.setId("mainDisplayBox");
 
 		Label spotifyInputFieldLabel = new Label();
 		Label spotifyTop20Label = new Label("Here's the top twenty, buckaroo");
@@ -110,7 +111,52 @@ public class GUI extends Application
 		TextField artistInputField = new TextField();
 		TextField albumInputField = new TextField();
 
-		ListView top20List = new ListView<>();
+		//ListView top20List = new ListView<>();
+		String[] top20 = new String[20];
+		for (int i = 0; i < 20; ++i)
+		{
+			top20[i] = (i+1) + ". Probably a Kendrick Lamar Song";
+		}
+		Button top20_1 = new Button(top20[0]);
+		Button top20_2 = new Button(top20[1]);
+		Button top20_3 = new Button(top20[2]);
+		Button top20_4 = new Button(top20[3]);
+		Button top20_5 = new Button(top20[4]);
+		Button top20_6 = new Button(top20[5]);
+		Button top20_7 = new Button(top20[6]);
+		Button top20_8 = new Button(top20[7]);
+		Button top20_9 = new Button(top20[8]);
+		Button top20_10 = new Button(top20[9]);
+		Button top20_11 = new Button(top20[10]);
+		Button top20_12 = new Button(top20[11]);
+		Button top20_13 = new Button(top20[12]);
+		Button top20_14 = new Button(top20[13]);
+		Button top20_15 = new Button(top20[14]);
+		Button top20_16 = new Button(top20[15]);
+		Button top20_17 = new Button(top20[16]);
+		Button top20_18 = new Button(top20[17]);
+		Button top20_19 = new Button(top20[18]);
+		Button top20_20 = new Button(top20[19]);
+		top20_1.setId("top20TweetButton");
+		top20_2.setId("top20TweetButton");
+		top20_3.setId("top20TweetButton");
+		top20_4.setId("top20TweetButton");
+		top20_5.setId("top20TweetButton");
+		top20_6.setId("top20TweetButton");
+		top20_7.setId("top20TweetButton");
+		top20_8.setId("top20TweetButton");
+		top20_9.setId("top20TweetButton");
+		top20_10.setId("top20TweetButton");
+		top20_11.setId("top20TweetButton");
+		top20_12.setId("top20TweetButton");
+		top20_13.setId("top20TweetButton");
+		top20_14.setId("top20TweetButton");
+		top20_15.setId("top20TweetButton");
+		top20_16.setId("top20TweetButton");
+		top20_17.setId("top20TweetButton");
+		top20_18.setId("top20TweetButton");
+		top20_19.setId("top20TweetButton");
+		top20_20.setId("top20TweetButton");
 
 		// BUTTON ACTIONS (AFFECT MAIN DISPLAY BOX)
 		// CLEAR CHILDREN, UPDATE LABEL, ADD LABEL AND INPUT BOX TO MAIN DISPLAY BOX
@@ -135,20 +181,24 @@ public class GUI extends Application
 		top20Button.addEventHandler(ActionEvent.ACTION, (e)-> {
 				mainDisplayBox.getChildren().clear();
 				// fetch top 20 here
-				String[] top20 = {"1","2","skip a few","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","20"};
-				top20List.getItems().addAll((Object[])top20);
-				mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20List);
+				// String[] top20 = {"1","2","skip a few","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","20"};
+				//top20List.getItems().addAll((Object[])top20);
+				mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20_1, top20_2, top20_3, top20_4, top20_5, top20_6, top20_7, top20_8, top20_9, top20_10);
+
+				mainDisplayBox2.getChildren().clear();
+				mainDisplayBox2.getChildren().addAll(top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
 		});
 
 		// ADD MAIN DISPLAY BOX TO LAYOUT
 		spotifyLayout.add(mainDisplayBox, 1, 0);
+		spotifyLayout.add(mainDisplayBox2, 2, 0);
 
 		Button backButton = new Button("B");
 		backButton.setId("backButton");
 		backButton.setOnAction(e -> window.setScene(welcomeScene));
 
 		// ADD BACK BUTTON TO LAYOUT
-		spotifyLayout.add(backButton, 2, 0);
+		spotifyLayout.add(backButton, 3, 0);
 
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
