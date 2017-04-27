@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["D7sgE"]); }
-
-__d('messengerContactListReact',['reactRe','utilsRe','bs_js_null_undefined','MessengerContactList.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m,n,o){var p={contactAdapter:c('bs_js_null_undefined').from_opt(i),disableRole:c('utilsRe').optionBoolToNullUndefinedBoolean(j),listSections:k,onSelect:l,rowClassName:c('bs_js_null_undefined').from_opt(m),viewer:n,thread:c('bs_js_null_undefined').from_opt(o)},q=c('MessengerContactList.react');return function(r,s,t,u){return c('reactRe').wrapPropsShamelessly(q,p,r,s,t,u);};}g.createElement=h;}),null);

@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["u0LG9"]); }
-
-__d('messengerMenuReact',['reactRe','bs_js_null_undefined','MessengerMenu.react'],(function a(b,c,d,e,f,g){'use strict';var h={},i=c('MessengerMenu.react');function j(r,s,t,u){return c('reactRe').wrapPropsShamelessly(i,h,r,s,t,u);}var k=[j];function l(r,s,t,u){var v={href:c('bs_js_null_undefined').from_opt(r),label:s,onclick:c('bs_js_null_undefined').from_opt(t),target:c('bs_js_null_undefined').from_opt(u)},w=c('MessengerMenu.react').Item;return function(x,y,z,aa){return c('reactRe').wrapPropsShamelessly(w,v,x,y,z,aa);};}var m=[l],n={},o=c('MessengerMenu.react').Separator;function p(r,s,t,u){return c('reactRe').wrapPropsShamelessly(o,n,r,s,t,u);}var q=[p];g.Menu=k;g.MenuItem=m;g.MenuSeparator=q;}),null);

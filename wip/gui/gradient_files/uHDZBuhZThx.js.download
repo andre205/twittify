@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["7w5z4"]); }
-
-__d('messengerScrollableAreaReact',['reactRe','bs_js_null_undefined','MessengerScrollableArea.react'],(function a(b,c,d,e,f,g){'use strict';function h(i){var j={height:c('bs_js_null_undefined').from_opt(i)},k=c('MessengerScrollableArea.react');return function(l,m,n,o){return c('reactRe').wrapPropsShamelessly(k,j,l,m,n,o);};}g.createElement=h;}),null);

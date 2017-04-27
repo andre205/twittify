@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["CM2X4"]); }
-
-__d("MessengerGamesCustomUpdateAdmin_gameInfo.graphql",[],(function a(b,c,d,e,f,g){'use strict';var h={argumentDefinitions:[],kind:"Fragment",metadata:null,name:"MessengerGamesCustomUpdateAdmin_gameInfo",selections:[{kind:"ScalarField",alias:"name",args:null,name:"game_name",storageKey:null},{kind:"ScalarField",alias:"iconURI",args:null,name:"icon_uri",storageKey:null}],type:"GamesInstantPlayStyleInfo"};f.exports=h;}),null);

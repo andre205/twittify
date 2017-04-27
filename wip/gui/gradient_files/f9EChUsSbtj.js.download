@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["I3\/Oy"]); }
-
-__d('DraftFeatureFlags',['DraftFeatureFlags-core','DraftGK'],(function a(b,c,d,e,f,g){'use strict';c('DraftFeatureFlags-core').draft_killswitch_allow_nontextnodes=c('DraftGK').draft_killswitch_allow_nontextnodes;c('DraftFeatureFlags-core').draft_segmented_entities_behavior=c('DraftGK').draft_segmented_entities_behavior;f.exports=c('DraftFeatureFlags-core');}),null);

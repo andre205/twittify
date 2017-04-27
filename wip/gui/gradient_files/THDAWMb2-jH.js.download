@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["1uJ5G"]); }
-
-__d('messengerThreadPhotoUploaderReact',['reactRe','bs_js_null_undefined','MessengerThreadPhotoUploader.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l){var m={onComplete:i,onFail:c('bs_js_null_undefined').from_opt(j),onStart:c('bs_js_null_undefined').from_opt(k),uri:c('bs_js_null_undefined').from_opt(l)},n=c('MessengerThreadPhotoUploader.react');return function(o,p,q,r){return c('reactRe').wrapPropsShamelessly(n,m,o,p,q,r);};}g.createElement=h;}),null);

@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["kD9v3"]); }
-
-__d('RelayModernOperationSelector',['RelayConcreteVariables','RelayStoreUtils'],(function a(b,c,d,e,f,g){'use strict';var h=c('RelayConcreteVariables').getOperationVariables,i=c('RelayStoreUtils').ROOT_ID;function j(k,l){var m=h(k,l),n=i;return {fragment:{dataID:n,node:k.fragment,variables:m},node:k,root:{dataID:n,node:k.query,variables:m},variables:m};}f.exports={createOperationSelector:j};}),null);

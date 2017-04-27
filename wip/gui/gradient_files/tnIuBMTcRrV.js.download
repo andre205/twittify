@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["lrJTH"]); }
-
-__d('MercurySyncMarkFolderSeenTransformer',['MercuryGlobalActionType','MessagingTag'],(function a(b,c,d,e,f,g){'use strict';function h(i){return i.folders.map(function(j){return {action_type:c('MercuryGlobalActionType').MARK_ALL_SEEN,folder:c('MessagingTag').IRIS_MAPPING[j],timestamp:parseInt(i.timestamp,10)};});}f.exports={transform:h};}),null);

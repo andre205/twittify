@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["23zox"]); }
-
-__d('messengerTextWithEmojiInputReact',['reactRe','bs_js_null_undefined','MessengerTextWithEmojiInput.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m,n){var o={className:c('bs_js_null_undefined').from_opt(i),onReturn:c('bs_js_null_undefined').from_opt(j),maxLength:c('bs_js_null_undefined').from_opt(k),onChange:c('bs_js_null_undefined').from_opt(l),placeholder:c('bs_js_null_undefined').from_opt(m),initialValue:c('bs_js_null_undefined').from_opt(n)},p=c('MessengerTextWithEmojiInput.react');return function(q,r,s,t){return c('reactRe').wrapPropsShamelessly(p,o,q,r,s,t);};}g.createElement=h;}),null);

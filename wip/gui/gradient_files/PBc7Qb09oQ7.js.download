@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["XGWQJ"]); }
-
-__d('messengerButtonReact',['reactRe','bs_js_null_undefined','MessengerButton.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m,n,o,p){var q={className:c('bs_js_null_undefined').from_opt(i),role:c('bs_js_null_undefined').from_opt(j),disabled:c('bs_js_null_undefined').from_opt(k),customColor:c('bs_js_null_undefined').from_opt(l),use:c('bs_js_null_undefined').from_opt(m),onClick:c('bs_js_null_undefined').from_opt(n),label:o,type:p},r=c('MessengerButton.react');return function(s,t,u,v){return c('reactRe').wrapPropsShamelessly(r,q,s,t,u,v);};}g.createElement=h;}),null);

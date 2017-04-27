@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["3+jNa"]); }
-
-__d('isRelayModernEnvironment',[],(function a(b,c,d,e,f,g){'use strict';function h(i){return Boolean(i&&i['@@RelayModernEnvironment']);}f.exports=h;}),null);

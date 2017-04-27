@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["gS1Dy"]); }
-
-__d('fetchRelayModernQuery',['invariant','Promise'],(function a(b,c,d,e,f,g,h){'use strict';function i(j,k,l,m){j.unstable_internal||h(0);var n=j.unstable_internal,o=n.createOperationSelector,p=n.getOperation,q=p(k),r=o(q,l);return new (c('Promise'))(function(s,t){j.sendQuery({cacheConfig:m,onError:t,onCompleted:function u(){try{var v=j.lookup(r.fragment);s(v.data);}catch(w){t(w);}},operation:r});});}f.exports=i;}),null);

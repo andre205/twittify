@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["sjb8A"]); }
-
-__d('messengerCustomThreadColorButtonReact',['reactRe','bs_js_boolean','MessengerCustomThreadColorButton.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l){var m={colorChoice:i,colorName:j,isSelected:c('bs_js_boolean').to_js_boolean(k),onChoose:l},n=c('MessengerCustomThreadColorButton.react');return function(o,p,q,r){return c('reactRe').wrapPropsShamelessly(n,m,o,p,q,r);};}g.createElement=h;}),null);

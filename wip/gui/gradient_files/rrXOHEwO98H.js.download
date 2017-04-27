@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["7RKuh"]); }
-
-__d('customColorHighlightingReact',['reactRe','bs_js_null_undefined','CustomColorHighlighting.react'],(function a(b,c,d,e,f,g){'use strict';function h(i){var j={customColor:c('bs_js_null_undefined').from_opt(i)},k=c('CustomColorHighlighting.react');return function(l,m,n,o){return c('reactRe').wrapPropsShamelessly(k,j,l,m,n,o);};}g.createElement=h;}),null);

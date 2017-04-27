@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["Bf1aU"]); }
-
-__d('buildReactRelayContainer',['RelayPropTypes','assertFragmentMap','mapObject','RelayContainerUtils'],(function a(b,c,d,e,f,g){'use strict';var h=c('RelayContainerUtils').getComponentName,i=c('RelayContainerUtils').getContainerName,j={relay:c('RelayPropTypes').Relay};function k(l,m,n){var o=i(l);c('assertFragmentMap')(h(l),m);var p=void 0,q=void 0;function r(s,t){if(q==null||t.relay.environment!==p){p=t.relay.environment;var u=p.unstable_internal.getFragment,v=c('mapObject')(m,u);q=n(l,v);}return new q(s,t);}r.contextTypes=j;r.displayName=o;return r;}f.exports=k;}),null);
