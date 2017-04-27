@@ -58,6 +58,7 @@ public class GUI extends Application
 		twitterButton.setGraphic(twitterLogo);
 		twitterButton.setOnMouseEntered( e -> twitterLogo.setImage(twitterLogoWhite) );
 		twitterButton.setOnMouseExited( e -> twitterLogo.setImage(twitterLogoGray) );
+		twitterButton.setOnAction( e -> window.setScene(twitterScene) );
 
 		// SPOTIFY BUTTON
 		Button spotifyButton = new Button();
@@ -103,6 +104,7 @@ public class GUI extends Application
 
 		Label spotifyInputFieldLabel = new Label();
 		Label spotifyTop20Label = new Label("    Spotify Top 20");
+		//spotifyTop20Label.setStyle("-fx-text-fill: white");
 		Label spotifyFillerLabel = new Label(" ");
 
 
@@ -238,7 +240,7 @@ public class GUI extends Application
 		spotifyLayout.add(mainDisplayBox, 1, 0);
 		spotifyLayout.add(mainDisplayBox2, 2, 0);
 
-		Button backButton = new Button("B");
+		Button backButton = new Button("B\nA\nC\nK");
 		backButton.setId("backButton");
 		backButton.setOnAction(e -> window.setScene(welcomeScene));
 
@@ -248,6 +250,36 @@ public class GUI extends Application
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
 		spotifyScene.getStylesheets().add("styleSheet.css");
+
+
+
+		// TWITTAH SCENE
+		Label twitterSearchLabel = new Label("Find something on Twitter...");
+		twitterSearchLabel.setId("twitterSearchLabel");
+		TextField twitterSearchField = new TextField();
+		twitterSearchField.setPromptText("Search Twitter");
+		twitterSearchField.setId("twitterSearchField");
+		Button twitterSearchButton = new Button("ICON"); // ADD MAGNIFYING GLASS ICON
+		Button twitterBackButton = new Button("B\nA\nC\nK");
+		twitterBackButton.setOnAction( e -> window.setScene(welcomeScene) );
+		twitterBackButton.setId("twitterBackButton");
+
+		GridPane twitterLayout = new GridPane();
+		twitterLayout.add(twitterSearchLabel, 0, 0); // MOVE EVERYTHING TO CENTER
+		twitterLayout.add(twitterSearchField, 0, 1);
+		twitterLayout.add(twitterSearchButton, 1, 1);
+		twitterLayout.add(twitterBackButton, 2, 0);
+		twitterLayout.setId("twitterLayout");
+
+		twitterScene = new Scene(twitterLayout);
+		twitterScene.getStylesheets().add("styleSheet.css");
+
+
+
+
+
+
+
 
 		window.setScene(welcomeScene);
 		window.show();
