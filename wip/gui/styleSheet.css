@@ -7,6 +7,12 @@
 	-fx-font-family: Nunito;
 }
 
+#titleLabel {
+	-fx-font-size: 100;
+	-fx-translate-x: -258;
+	-fx-translate-y: -185;
+}
+
 #twitterButton, #spotifyButton {
 	-fx-background-color: transparent;
 	-fx-text-fill: transparent;
@@ -35,8 +41,50 @@
 	-fx-background-color: #16AC4C;
 }
 
-#titleLabel {
-	-fx-font-size: 100;
-	-fx-translate-x: -258;
-	-fx-translate-y: -185;
+#trackButton, #artistButton, #albumButton, #top20Button {
+	-fx-background-color: #1ED760;
+	-fx-font-size: 24;
+	-fx-text-fill: black;
+	-fx-pref-width: 250;
+	-fx-pref-height: 140;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: 1px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+
+#trackButton:hover, #artistButton:hover, #albumButton:hover, #top20Button:hover {
+	-fx-background-color: #16AC4C;
+}
+
+#mainDisplayBox {
+		-fx-background-color: #1ED760;
+		-fx-font-size: 24;
+		-fx-text-fill: black;
+		-fx-pref-width: 700;
+		-fx-pref-height: 600;
+		/*-fx-transition: -fx-opacity 1s;*/
+		-fx-border-radius: 0 0 0 0;
+		-fx-background-radius: 0 0 0 0;
+}
+
+#backButton {
+	-fx-background-color: #888888;
+	-fx-font-size: 12;
+	/*this rotates the whole button not just the text*/
+	/*-fx-rotate: -90;*/
+
+	-fx-text-fill: black;
+	-fx-pref-width: 50;
+	-fx-pref-height: 600;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+
+#backButton:hover {
+	-fx-background-color: #FFFFFF;
 }
