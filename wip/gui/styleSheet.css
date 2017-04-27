@@ -97,11 +97,16 @@
 	-fx-pref-width: 300;
 	-fx-pref-height: 52;
 	-fx-font-size: 16;
+	-fx-border-color: transparent;
+	-fx-border-width: .5px;
+	/*-fx-opacity: 1;*/
 }
 
 #top20TweetButton:hover {
-	-fx-background-color: #1DCAFF;
-
+	/*-fx-background-color: #1DCAFF;*/
+	-fx-border-color: #1DCAFF;
+	-fx-border-width: 3px;
+	/*-fx-opacity: .5;*/
 }
 
 #spotifyTop20Label {

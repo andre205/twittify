@@ -279,13 +279,6 @@ public class GUI extends Application
 		twitterScene = new Scene(twitterLayout);
 		twitterScene.getStylesheets().add("styleSheet.css");
 
-
-
-
-
-
-
-
 		window.setScene(welcomeScene);
 		window.show();
 	}
