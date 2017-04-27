@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["KfcUj"]); }
+
+__d('messengerBugNubReact',['reactRe','utilsRe','bs_js_null_undefined','MessengerBugNub.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={isBetaEnabled:c('utilsRe').optionBoolToNullUndefinedBoolean(i),unixName:c('bs_js_null_undefined').from_opt(j)},l=c('MessengerBugNub.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);

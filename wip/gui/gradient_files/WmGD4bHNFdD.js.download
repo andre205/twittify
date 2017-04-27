@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["OXQJ3"]); }
+
+__d('messengerThreadlistNewMessageRowReact',['reactRe','bs_js_boolean','MessengerThreadlistNewMessageRow.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={isActive:c('bs_js_boolean').to_js_boolean(i),onClose:j},l=c('MessengerThreadlistNewMessageRow.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);

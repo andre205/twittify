@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["vGzYd"]); }
+
+__d('messengerNewMessagesNoticeReact',['reactRe','bs_js_boolean','MessengerNewMessagesNotice.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={isOpen:c('bs_js_boolean').to_js_boolean(i),onClick:j},l=c('MessengerNewMessagesNotice.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);

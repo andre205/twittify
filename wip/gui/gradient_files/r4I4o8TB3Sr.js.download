@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["tgReh"]); }
+
+__d('montageThreadViewContainerReact',['reactRe','bs_js_null_undefined','MontageThreadViewContainer.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={threadID:i,onResize:c('bs_js_null_undefined').from_opt(j)},l=c('MontageThreadViewContainer.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);

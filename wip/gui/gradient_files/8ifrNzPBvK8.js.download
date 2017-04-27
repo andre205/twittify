@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["sjDN5"]); }
+
+__d('messengerSpinnerReact',['reactRe','bs_js_null_undefined','MessengerSpinner.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k){var l={className:c('bs_js_null_undefined').from_opt(i),color:c('bs_js_null_undefined').from_opt(j),size:c('bs_js_null_undefined').from_opt(k)},m=c('MessengerSpinner.react');return function(n,o,p,q){return c('reactRe').wrapPropsShamelessly(m,l,n,o,p,q);};}g.createElement=h;}),null);

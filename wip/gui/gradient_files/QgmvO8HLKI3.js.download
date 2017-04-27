@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["0hXxG"]); }
+
+__d('messengerRTCCallButtonReact',['reactRe','bs_js_boolean','MessengerRTCCallButton.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m,n,o,p){var q={className:i,customColor:j,isVideo:c('bs_js_boolean').to_js_boolean(k),participants:l,thread:m,threadID:n,viewer:o,calleeName:p},r=c('MessengerRTCCallButton.react');return function(s,t,u,v){return c('reactRe').wrapPropsShamelessly(r,q,s,t,u,v);};}g.createElement=h;}),null);

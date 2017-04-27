@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["Lk\/t1"]); }
+
+__d('commitRelayModernMutation',[],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k=i.unstable_internal,l=k.createOperationSelector,m=k.getOperation,n=m(j.mutation),o=j.onError,p=j.optimisticUpdater,q=j.optimisticResponse,r=j.updater,s=j.variables,t=j.uploadables,u=l(n,s),v={onError:o,operation:u,optimisticUpdater:p,updater:r,uploadables:t,onCompleted:function w(x){var y=j.onCompleted;if(y){var z=i.lookup(u.fragment);y(z.data,x);}}};if(!p&&q)v.optimisticUpdater=function(w){w.commitPayload(u.fragment,q());};return i.sendMutation(v);}f.exports=h;}),null);

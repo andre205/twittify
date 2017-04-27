@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["ekFnP"]); }
+
+__d('messengerDetailViewReact',['reactRe','bs_js_null_undefined','MessengerDetailView.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m){var n={activeThreadID:c('bs_js_null_undefined').from_opt(i),mid:c('bs_js_null_undefined').from_opt(j),query:c('bs_js_null_undefined').from_opt(k),view:c('bs_js_null_undefined').from_opt(l),viewer:m},o=c('MessengerDetailView.react');return function(p,q,r,s){return c('reactRe').wrapPropsShamelessly(o,n,p,q,r,s);};}g.createElement=h;}),null);

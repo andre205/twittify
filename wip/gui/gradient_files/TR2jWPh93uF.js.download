@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["reqty"]); }
+
+__d('messengerErrorBoundaryReact',['reactRe','bs_js_null_undefined','MessengerErrorBoundary.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={className:c('bs_js_null_undefined').from_opt(i),component:c('bs_js_null_undefined').from_opt(j)},l=c('MessengerErrorBoundary.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);

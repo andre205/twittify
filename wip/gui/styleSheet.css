@@ -60,7 +60,7 @@
 }
 
 #mainDisplayBox {
-	-fx-background-color: black;
+	/*-fx-background-color: black;*/*/
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 350;
@@ -68,9 +68,10 @@
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
+	-fx-background-image: url("gradient.png");
 }
 
-#backButton {
+#spotifyBackButton {
 	-fx-background-color: #000000;
 	-fx-font-size: 24; /*MAX SIZE*/
 	/*this rotates the whole button not just the text*/
@@ -83,14 +84,15 @@
 	-fx-border-width: .5px;
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
+	text-align: center;
 }
 
-#backButton:hover {
+#spotifyBackButton:hover {
 	-fx-background-color: #808080;
 }
 
 #top20TweetButton {
-	-fx-background-color: black;
+	-fx-background-color: transparent;
 	/*-fx-background-color: #1ED760;*/
 	-fx-pref-width: 300;
 	-fx-pref-height: 52;
@@ -100,6 +102,15 @@
 #top20TweetButton:hover {
 	-fx-background-color: #1DCAFF;
 
+}
+
+#spotifyTop20Label {
+	-fx-font-size: 24;
+}
+
+#spotifyFillerLabel {
+	-fx-font-size: 24;
+	-fx-text-fill: transparent;
 }
 
 .button {

@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["H+5eE"]); }
+
+__d('messengerInfoPanelMuteSettingsReact',['reactRe','bs_js_boolean','bs_js_null_undefined','MessengerInfoPanelMuteSettings.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l){var m={isMuted:c('bs_js_boolean').to_js_boolean(i),mutedUntil:c('bs_js_null_undefined').from_opt(j),onMuteChange:k,thread:l},n=c('MessengerInfoPanelMuteSettings.react');return function(o,p,q,r){return c('reactRe').wrapPropsShamelessly(n,m,o,p,q,r);};}g.createElement=h;}),null);

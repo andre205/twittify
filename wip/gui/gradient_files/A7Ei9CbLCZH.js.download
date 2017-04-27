@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["45zH5"]); }
+
+__d('messengerPopoverMenuReact',['reactRe','utilsRe','bs_js_null_undefined','MessengerPopoverMenu.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k,l,m){var n={disableArrowKeyActivation:c('utilsRe').optionBoolToNullUndefinedBoolean(i),isOpen:c('utilsRe').optionBoolToNullUndefinedBoolean(j),menu:k,onHide:c('bs_js_null_undefined').from_opt(l),onShow:c('bs_js_null_undefined').from_opt(m)},o=c('MessengerPopoverMenu.react');return function(p,q,r,s){return c('reactRe').wrapPropsShamelessly(o,n,p,q,r,s);};}g.createElement=h;}),null);

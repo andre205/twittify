@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["F2O9N"]); }
+
+__d('RelayModernGraphQLTag',['invariant'],(function a(b,c,d,e,f,g,h){'use strict';function i(){h(0);}i.experimental=function(){h(0);};function j(m){var n=typeof m==='function'?m:m.modern;if(typeof n!=='function')return m;return n();}function k(m){var n=j(m);typeof n==='object'&&n!==null&&n.kind==='Fragment'||h(0);return n;}function l(m){var n=j(m);typeof n==='object'&&n!==null&&n.kind==='Batch'||h(0);return n;}f.exports={getFragment:k,getOperation:l,graphql:i};}),null);

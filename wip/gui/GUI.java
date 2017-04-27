@@ -104,8 +104,10 @@ public class GUI extends Application
 
 		Label spotifyInputFieldLabel = new Label();
 		Label spotifyTop20Label = new Label("    Spotify Top 20");
+		spotifyTop20Label.setId("spotifyTop20Label");
 		//spotifyTop20Label.setStyle("-fx-text-fill: white");
 		Label spotifyFillerLabel = new Label(" ");
+		spotifyFillerLabel.setId("spotifyFillerLabel");
 
 
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
@@ -240,18 +242,16 @@ public class GUI extends Application
 		spotifyLayout.add(mainDisplayBox, 1, 0);
 		spotifyLayout.add(mainDisplayBox2, 2, 0);
 
-		Button backButton = new Button("B\nA\nC\nK");
-		backButton.setId("backButton");
-		backButton.setOnAction(e -> window.setScene(welcomeScene));
+		Button spotifyBackButton = new Button("B\nA\nC\nK");
+		spotifyBackButton.setId("spotifyBackButton");
+		spotifyBackButton.setOnAction(e -> window.setScene(welcomeScene));
 
 		// ADD BACK BUTTON TO LAYOUT
-		spotifyLayout.add(backButton, 3, 0);
+		spotifyLayout.add(spotifyBackButton, 3, 0);
 
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
 		spotifyScene.getStylesheets().add("styleSheet.css");
-
-
 
 		// TWITTAH SCENE
 		Label twitterSearchLabel = new Label("Find something on Twitter...");

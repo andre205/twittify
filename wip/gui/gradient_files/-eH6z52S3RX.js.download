@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["DD26U"]); }
+
+__d('messengerThreadlistMessageRequestsRowReact',['reactRe','MessengerThreadlistMessageRequestsRow.react'],(function a(b,c,d,e,f,g){'use strict';function h(i,j){var k={newMessageRequestThreads:i,viewer:j},l=c('MessengerThreadlistMessageRequestsRow.react');return function(m,n,o,p){return c('reactRe').wrapPropsShamelessly(l,k,m,n,o,p);};}g.createElement=h;}),null);
