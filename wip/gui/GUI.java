@@ -1,12 +1,10 @@
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.*;
-import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class GUI extends Application
 {
