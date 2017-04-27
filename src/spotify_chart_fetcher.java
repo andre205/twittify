@@ -13,9 +13,9 @@ public class spotify_chart_fetcher
 {
 		public spotify_chart_fetcher(){};
 
-		public String[] getTop200()
+		public String[] getTop20()
 		{
-				String[] returnlist = new String[200];
+				String[] returnlist = new String[20];
 
 				try{
 						//Get top 200 CSV from spotifycharts
@@ -38,6 +38,10 @@ public class spotify_chart_fetcher
 
 									returnlist[i] = s;
 									i++;
+									if (i == 21)
+									{
+										break;
+									}
 					    }
 
 				}

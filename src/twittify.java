@@ -19,7 +19,7 @@ public class twittify {
         //
 
         //DISPLAY AND READ USER SEARCH OPTIONS
-        String[] searchoptions = {"a track","an artist","an album","the top 200"};
+        String[] searchoptions = {"a track","an artist","an album","the top 20"};
         int user_option = menu.create("Search spotify for", searchoptions);
         //
 
@@ -27,22 +27,22 @@ public class twittify {
         if (user_option == 4)
         {
             //CREATE NEW INSTANCES OF DISPLAY ARRAY AND INDEX TABLE
-            String[] top200 = scf.getTop200();//POPULATE ARRAY
-            List<String[]> top200table = new LinkedList<String[]>();
+            String[] top20 = scf.getTop20();//POPULATE ARRAY
+            List<String[]> top20table = new LinkedList<String[]>();
 
-            //DISPLAY TOP 200
-            System.out.println("Spotify Top 200");
-            for (int i = 0; i < 200; ++i)
+            //DISPLAY TOP 20
+            System.out.println("Spotify Top 20");
+            for (int i = 0; i < 20; ++i)
             {
                 //POPULATE INDEXE TABLE
-                top200table.add(new String[] {String.valueOf(i+1),top200[i]});
+                top20table.add(new String[] {String.valueOf(i+1),top20[i]});
                 //PRINT SONGS
-                System.out.println((i+1) + ": " + top200[i]);
+                System.out.println((i+1) + ": " + top20[i]);
             }
 
             //USER INPUT CHOICE
             String songnum = menu.create("Enter a song number to pull up most recent related tweets!");
-            for (String[] a : top200table)
+            for (String[] a : top20table)
             {
                 //FINDS SONG CORRESPONDING TO USER INPUT
                 if(a[0].equals(songnum))
