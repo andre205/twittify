@@ -7,12 +7,14 @@
 	-fx-font-family: Nunito;
 }
 
-#twitterButton {
+#twitterButton, #spotifyButton {
 	-fx-background-color: transparent;
 	-fx-text-fill: transparent;
 	-fx-pref-width: 500;
 	-fx-pref-height: 600;
-	-fx-transition: -fx-opacity 1s;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
 }
 
 #twitterButton:hover {
@@ -22,14 +24,6 @@
 
 #twitterButton:pressed {
 	-fx-background-color: #17A3CF;
-}
-
-#spotifyButton {
-	-fx-background-color: transparent;
-	-fx-text-fill: transparent;
-	-fx-pref-width: 500;
-	-fx-pref-height: 600;
-	-fx-transition: -fx-opacity 1s;
 }
 
 #spotifyButton:hover {
