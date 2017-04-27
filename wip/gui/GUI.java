@@ -11,9 +11,8 @@ import javafx.scene.Scene;
 public class GUI extends Application
 {
 	Stage window;
-	Scene welcomeScene, spotifyScene, twitterScene;
+	Scene welcomeScene, twitterScene, spotifyScene;
 	ListView<String> listView1, listView2;
-	ChoiceBox<String> choiceBox;
 
 	public static void main(String[] args)
 	{
@@ -60,6 +59,7 @@ public class GUI extends Application
 		Button spotifyButton = new Button();
 		spotifyButton.setId("spotifyButton");
 		spotifyButton.setGraphic(spotifyLogo);
+		//spotifyButton.setOnAction( e -> window.setScene(spotifyScene) );
 
 
 		// IDVIDES SCREEN IN HALF; LEFT SIDE TWITTER (0,0); RIGHT SIDE SPOTIFY (1,0)
@@ -76,7 +76,10 @@ public class GUI extends Application
 		Button albumButton = new Button("Search Album");
 		Button top20Button = new Button("Spotify Top 20");
 
+		VBox choicesBox = new VBox();
+		choicesBox.getChildren().addAll(trackButton, artistButton, albumButton, top20Button);
 
+		spotifyScene = new Scene(choicesBox);
 
 		window.setScene(welcomeScene);
 		window.show();
