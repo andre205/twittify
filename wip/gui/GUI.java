@@ -104,39 +104,83 @@ public class GUI extends Application
 		mainDisplayBox2.setId("mainDisplayBox");
 
 		Label spotifyInputFieldLabel = new Label();
-		Label spotifyTop20Label = new Label("Here's the top twenty, buckaroo");
+		Label spotifyTop20Label = new Label("    Spotify Top 20");
+		Label spotifyFillerLabel = new Label(" ");
+
 
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
 		TextField trackInputField = new TextField();
 		TextField artistInputField = new TextField();
 		TextField albumInputField = new TextField();
 
+		// FETCH TOP 20 HERE WITH SPOTIFY CHART FETCHER
 		//ListView top20List = new ListView<>();
 		String[] top20 = new String[20];
 		for (int i = 0; i < 20; ++i)
 		{
 			top20[i] = (i+1) + ". Probably a Kendrick Lamar Song";
 		}
+
 		Button top20_1 = new Button(top20[0]);
+		top20_1.setOnMouseEntered( e -> top20_1.setText("View tweets!") );
+		top20_1.setOnMouseExited( e -> top20_1.setText(top20[0]) );
 		Button top20_2 = new Button(top20[1]);
+		top20_2.setOnMouseEntered( e -> top20_2.setText("View tweets!") );
+		top20_2.setOnMouseExited( e -> top20_2.setText(top20[1]) );
 		Button top20_3 = new Button(top20[2]);
+		top20_3.setOnMouseEntered( e -> top20_3.setText("View tweets!") );
+		top20_3.setOnMouseExited( e -> top20_3.setText(top20[2]) );
 		Button top20_4 = new Button(top20[3]);
+		top20_4.setOnMouseEntered( e -> top20_4.setText("View tweets!") );
+		top20_4.setOnMouseExited( e -> top20_4.setText(top20[3]) );
 		Button top20_5 = new Button(top20[4]);
+		top20_5.setOnMouseEntered( e -> top20_5.setText("View tweets!") );
+		top20_5.setOnMouseExited( e -> top20_5.setText(top20[4]) );
 		Button top20_6 = new Button(top20[5]);
+		top20_6.setOnMouseEntered( e -> top20_6.setText("View tweets!") );
+		top20_6.setOnMouseExited( e -> top20_6.setText(top20[5]) );
 		Button top20_7 = new Button(top20[6]);
+		top20_7.setOnMouseEntered( e -> top20_7.setText("View tweets!") );
+		top20_7.setOnMouseExited( e -> top20_7.setText(top20[6]) );
 		Button top20_8 = new Button(top20[7]);
+		top20_8.setOnMouseEntered( e -> top20_8.setText("View tweets!") );
+		top20_8.setOnMouseExited( e -> top20_8.setText(top20[7]) );
 		Button top20_9 = new Button(top20[8]);
+		top20_9.setOnMouseEntered( e -> top20_9.setText("View tweets!") );
+		top20_9.setOnMouseExited( e -> top20_9.setText(top20[8]) );
 		Button top20_10 = new Button(top20[9]);
+		top20_10.setOnMouseEntered( e -> top20_10.setText("View tweets!") );
+		top20_10.setOnMouseExited( e -> top20_10.setText(top20[9]) );
 		Button top20_11 = new Button(top20[10]);
+		top20_11.setOnMouseEntered( e -> top20_11.setText("View tweets!") );
+		top20_11.setOnMouseExited( e -> top20_11.setText(top20[10]) );
 		Button top20_12 = new Button(top20[11]);
+		top20_12.setOnMouseEntered( e -> top20_12.setText("View tweets!") );
+		top20_12.setOnMouseExited( e -> top20_12.setText(top20[11]) );
 		Button top20_13 = new Button(top20[12]);
+		top20_13.setOnMouseEntered( e -> top20_13.setText("View tweets!") );
+		top20_13.setOnMouseExited( e -> top20_13.setText(top20[12]) );
 		Button top20_14 = new Button(top20[13]);
+		top20_14.setOnMouseEntered( e -> top20_14.setText("View tweets!") );
+		top20_14.setOnMouseExited( e -> top20_14.setText(top20[13]) );
 		Button top20_15 = new Button(top20[14]);
+		top20_15.setOnMouseEntered( e -> top20_15.setText("View tweets!") );
+		top20_15.setOnMouseExited( e -> top20_15.setText(top20[14]) );
 		Button top20_16 = new Button(top20[15]);
+		top20_16.setOnMouseEntered( e -> top20_16.setText("View tweets!") );
+		top20_16.setOnMouseExited( e -> top20_16.setText(top20[15]) );
 		Button top20_17 = new Button(top20[16]);
+		top20_17.setOnMouseEntered( e -> top20_17.setText("View tweets!") );
+		top20_17.setOnMouseExited( e -> top20_17.setText(top20[16]) );
 		Button top20_18 = new Button(top20[17]);
+		top20_18.setOnMouseEntered( e -> top20_18.setText("View tweets!") );
+		top20_18.setOnMouseExited( e -> top20_18.setText(top20[17]) );
 		Button top20_19 = new Button(top20[18]);
+		top20_19.setOnMouseEntered( e -> top20_19.setText("View tweets!") );
+		top20_19.setOnMouseExited( e -> top20_19.setText(top20[18]) );
 		Button top20_20 = new Button(top20[19]);
+		top20_20.setOnMouseEntered( e -> top20_20.setText("View tweets!") );
+		top20_20.setOnMouseExited( e -> top20_20.setText(top20[19]) );
 		top20_1.setId("top20TweetButton");
 		top20_2.setId("top20TweetButton");
 		top20_3.setId("top20TweetButton");
@@ -186,13 +230,10 @@ public class GUI extends Application
 
 		top20Button.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
-			// fetch top 20 here
-			// String[] top20 = {"1","2","skip a few","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","20"};
-			//top20List.getItems().addAll((Object[])top20);
 			mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20_1, top20_2, top20_3, top20_4, top20_5, top20_6, top20_7, top20_8, top20_9, top20_10);
 
 			mainDisplayBox2.getChildren().clear();
-			mainDisplayBox2.getChildren().addAll(top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
+			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
 		} );
 
 		// ADD MAIN DISPLAY BOX TO LAYOUT

@@ -59,7 +59,8 @@
 }
 
 #mainDisplayBox {
-		-fx-background-color: #1ED760;
+		-fx-background-color: white;
+		/*-fx-background-color: #1ED760;*/
 		-fx-font-size: 24;
 		-fx-text-fill: black;
 		-fx-pref-width: 350;
@@ -89,12 +90,14 @@
 }
 
 #top20TweetButton {
-	-fx-background-color: #1ED760;
+	-fx-background-color: white;
+	/*-fx-background-color: #1ED760;*/
 	-fx-pref-width: 300;
 	-fx-pref-height: 40;
 	-fx-font-size: 16;
 }
 
 #top20TweetButton:hover {
-	-fx-background-color: #16AC4C;
+	-fx-background-color: #1DCAFF;
+
 }
