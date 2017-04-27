@@ -36,31 +36,31 @@ public class GUI extends Application
 		Label titleLabel = new Label("TWITTIFY");
 		titleLabel.setId("titleLabel");
 		titleLabel.setMouseTransparent(true);
-		Button twitterButton = new Button();
-		twitterButton.setId("twitterButton");
-		Button spotifyButton = new Button();
-		spotifyButton.setId("spotifyButton");
+		// titleLabel.setTranslateY(-200);
+		// titleLabel.setTranslateX(-258);
 
 		Image twitterLogoImage = new Image("twitterLogoGray.png");
 		ImageView twitterLogo = new ImageView();
 		twitterLogo.setMouseTransparent(true);
 		twitterLogo.setFitWidth(200);
 		twitterLogo.setPreserveRatio(true);
+		twitterLogo.setImage(twitterLogoImage);
 
 		Image spotifyLogoImage = new Image("spotifyLogoGray.png");
 		ImageView spotifyLogo = new ImageView();
 		spotifyLogo.setMouseTransparent(true);
 		spotifyLogo.setFitWidth(175);
 		spotifyLogo.setPreserveRatio(true);
-
-		twitterButton.setGraphic(twitterLogo);
-		spotifyButton.setGraphic(spotifyLogo);
-
-		twitterLogo.setImage(twitterLogoImage);
 		spotifyLogo.setImage(spotifyLogoImage);
 
-		titleLabel.setTranslateY(-200);
-		titleLabel.setTranslateX(-258);
+		Button twitterButton = new Button();
+		twitterButton.setId("twitterButton");
+		twitterButton.setGraphic(twitterLogo);
+
+		Button spotifyButton = new Button();
+		spotifyButton.setId("spotifyButton");
+		spotifyButton.setGraphic(spotifyLogo);
+
 
 		// IDVIDES SCREEN IN HALF; LEFT SIDE TWITTER (0,0); RIGHT SIDE SPOTIFY (1,0)
 		welcomeLayout.add(twitterButton, 0, 0);
@@ -76,7 +76,7 @@ public class GUI extends Application
 		Button albumButton = new Button("Search Album");
 		Button top20Button = new Button("Spotify Top 20");
 
-		
+
 
 		window.setScene(welcomeScene);
 		window.show();

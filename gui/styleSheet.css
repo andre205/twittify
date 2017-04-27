@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Nunito-SemiBold';
-	src: url('Nunito-SemiBold.ttf');
+	font-family: Nunito;
+	src: url("Nunito-SemiBold.ttf");
 }
 
 * {
@@ -42,8 +42,9 @@
 }
 
 #titleLabel {
-	-fx-position: relative;
-	-fx-left: 150px;
-	-fx-top: 100px;
 	-fx-font-size: 100;
+	position: fixed;
+	bottom: 60%;
+	right: 50%;
+	width: 300px;
 }
