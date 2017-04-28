@@ -6,11 +6,14 @@
 	-fx-font-family: 'Nunito Semibold';
 }
 
+.button, .label {
+	-fx-text-fill: white;
+}
+
 #titleLabel {
 	-fx-font-size: 100;
 	-fx-translate-x: -258;
 	-fx-translate-y: -185;
-	-fx-font-family: Nunito;
 	-fx-text-fill: black;
 }
 
@@ -60,7 +63,7 @@
 }
 
 #mainDisplayBox {
-	/*-fx-background-color: black;*/*/
+	/*-fx-background-color: black;*/
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 350;
@@ -68,7 +71,7 @@
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	-fx-background-image: url("gradient.png");
+	-fx-background-image: url("images/gradient.png");
 }
 
 #spotifyBackButton {
@@ -113,17 +116,9 @@
 	-fx-font-size: 24;
 }
 
-#spotifyFillerLabel {
+#spotifyFillerLabel, #twitterFillerLabel {
 	-fx-font-size: 24;
 	-fx-text-fill: transparent;
-}
-
-.button {
-	-fx-text-fill: white;
-}
-
-.label {
-	-fx-text-fill: white;
 }
 
 #twitterLayout {
@@ -138,24 +133,29 @@
 }
 
 #twitterSearchField {
-	-fx-translate-y: -200;
+	/*-fx-translate-y: -200;*/
 }
 
 #twitterBackButton {
-	-fx-background-color: #1DCAFF;
-	-fx-font-size: 24; /*MAX SIZE*/
-	/*this rotates the whole button not just the text*/
-	/*-fx-rotate: -90;*/
-	-fx-text-fill: white;
+	/*-fx-background-color: #1DCAFF;
+	-fx-font-size: 24; /*MAX SIZE*/*/
+	/*this rotates the whole button not just the text*/	/**/
+	/*-fx-rotate: -90;*/	/**/
+	/*-fx-text-fill: white;
 	-fx-pref-width: 50;
-	-fx-pref-height: 600;
-	/*-fx-transition: -fx-opacity 1s;*/
-	/*-fx-border-color: black;*/
-	/*-fx-border-width: .5px;*/
-	-fx-border-radius: 0 0 0 0;
-	-fx-background-radius: 0 0 0 0;
+	-fx-pref-height: 600;*/
+	/*-fx-transition: -fx-opacity 1s;*/	/**/
+	/*-fx-border-color: black;*/	/**/
+	/*-fx-border-width: .5px;*/	/**/
+	/*-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;*/
 }
 
 #twitterBackButton:hover {
+	-fx-background-color: #17A3CF;
+}
+
+#twitterSearchButton {
+	/*-fx-translate-y: -200;*/
 	-fx-background-color: #17A3CF;
 }

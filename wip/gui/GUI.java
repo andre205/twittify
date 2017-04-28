@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 
 public class GUI extends Application
 {
+	GridPane welcomeLayout, twitterLayout;
 	Stage window;
 	Scene welcomeScene, twitterScene, spotifyScene;
 	ListView<String> listView1, listView2;
@@ -26,8 +27,9 @@ public class GUI extends Application
 		window.setMaxWidth(1000);
 		window.setMaxHeight(600);
 
-		// WELCOME SCREEN
-		GridPane welcomeLayout = new GridPane();
+		// ------------------------------------------------------------------ //
+
+		// *** --- WELCOME SCENE --- *** //
 
 		// WELCOME SCREEN LABEL
 		Label titleLabel = new Label("TWITTIFY");
@@ -35,8 +37,8 @@ public class GUI extends Application
 		titleLabel.setMouseTransparent(true);
 
 		// TWITTER BUTTON IMAGES
-		Image twitterLogoGray = new Image("twitterLogoGray.png");
-		Image twitterLogoWhite = new Image("twitterLogoWhite.png");
+		Image twitterLogoGray = new Image("images/twitterLogoGray.png");
+		Image twitterLogoWhite = new Image("images/twitterLogoWhite.png");
 		ImageView twitterLogo = new ImageView();
 		twitterLogo.setMouseTransparent(true);
 		twitterLogo.setFitWidth(200);
@@ -44,8 +46,8 @@ public class GUI extends Application
 		twitterLogo.setImage(twitterLogoGray);
 
 		// SPOTIFY BUTTON IMAGES
-		Image spotifyLogoGray = new Image("spotifyLogoGray.png");
-		Image spotifyLogoColored = new Image("spotifyLogoColored.png");
+		Image spotifyLogoGray = new Image("images/spotifyLogoGray.png");
+		Image spotifyLogoColored = new Image("images/spotifyLogoColored.png");
 		ImageView spotifyLogo = new ImageView();
 		spotifyLogo.setMouseTransparent(true);
 		spotifyLogo.setFitWidth(175);
@@ -69,14 +71,19 @@ public class GUI extends Application
 		spotifyButton.setOnAction(e -> window.setScene(spotifyScene));
 
 		// DIVIDES SCREEN IN HALF; LEFT SIDE TWITTER (0,0); RIGHT SIDE SPOTIFY (1,0)
+		welcomeLayout = new GridPane();
 		welcomeLayout.add(twitterButton, 0, 0);
 		welcomeLayout.add(spotifyButton, 1, 0);
 		welcomeLayout.add(titleLabel, 1, 0);
 
+		// FILL SCENE AND APPLY STYLESHEET
 		welcomeScene = new Scene(welcomeLayout);
 		welcomeScene.getStylesheets().add("styleSheet.css");
 
-		// SPOTIFY SCENE
+		// ------------------------------------------------------------------ //
+
+		// *** --- SPOTIFY SCENE --- *** //
+
 		// LEFT BUTTONS
 		Button trackButton = new Button("Search Track");
 		trackButton.setId("trackButton");
@@ -253,21 +260,45 @@ public class GUI extends Application
 		spotifyScene = new Scene(spotifyLayout);
 		spotifyScene.getStylesheets().add("styleSheet.css");
 
-		// TWITTAH SCENE
+		// ------------------------------------------------------------------ //
+
+		// *** --- TWITTER SCENE --- *** //
+
+		// SEARCH TWITTER LABELS
 		Label twitterSearchLabel = new Label("Find something on Twitter...");
 		twitterSearchLabel.setId("twitterSearchLabel");
+		Label twitterFillerLabel = new Label(" ");
+		twitterFillerLabel.setId("twitterFillerLabel");
+
+		// SEARCH FIELD AND BUTTON
 		TextField twitterSearchField = new TextField();
-		twitterSearchField.setPromptText("Search Twitter");
+		twitterSearchField.setPromptText("Search");
 		twitterSearchField.setId("twitterSearchField");
-		Button twitterSearchButton = new Button("ICON"); // ADD MAGNIFYING GLASS ICON
+
+		// SEARCH BUTTON IMAGE
+		Image searchIcon = new Image("images/searchIcon.png");
+		ImageView twitterSearchIcon = new ImageView(searchIcon);
+		twitterSearchIcon.setMouseTransparent(true);
+		twitterSearchIcon.setFitHeight(20);
+		twitterSearchIcon.setFitWidth(35);
+		twitterSearchIcon.setPreserveRatio(true);
+		twitterSearchIcon.setImage(searchIcon);
+
+		Button twitterSearchButton = new Button();
+		twitterSearchButton.setId("twitterSearchButton");
+		twitterSearchButton.setGraphic(twitterSearchIcon);
+		HBox twitterSearchBox = new HBox(10);
+		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
+
+		// BACK BUTTON
 		Button twitterBackButton = new Button("B\nA\nC\nK");
 		twitterBackButton.setOnAction( e -> window.setScene(welcomeScene) );
 		twitterBackButton.setId("twitterBackButton");
 
-		GridPane twitterLayout = new GridPane();
-		HBox twitterSearchBox = new HBox(10);
-		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
-		twitterLayout.add(twitterSearchLabel, 0, 0); // MOVE EVERYTHING TO CENTER
+		// LAYOUT
+		twitterLayout = new GridPane();
+		twitterLayout.add(twitterSearchLabel, 0, 0);
+		twitterLayout.add(twitterFillerLabel, 1, 0);
 		// twitterLayout.add(twitterSearchBox, 0, 1);
 		// twitterLayout.add(twitterSearchButton, 1, 1);
 		twitterLayout.add(twitterSearchBox, 0, 1);
@@ -279,6 +310,7 @@ public class GUI extends Application
 		twitterScene = new Scene(twitterLayout);
 		twitterScene.getStylesheets().add("styleSheet.css");
 
+		// SHOW WELCOME SCENE ON START
 		window.setScene(welcomeScene);
 		window.show();
 	}
