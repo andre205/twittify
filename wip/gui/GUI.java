@@ -85,20 +85,37 @@ public class GUI extends Application
 		// *** --- SPOTIFY SCENE --- *** //
 
 		// LEFT BUTTONS
-		Button trackButton = new Button("Search Track");
-		trackButton.setId("trackButton");
-		Button artistButton = new Button("Search Artist");
-		artistButton.setId("artistButton");
-		Button albumButton = new Button("Search Album");
-		albumButton.setId("albumButton");
-		Button top20Button = new Button("Spotify Top 20");
-		top20Button.setId("top20Button");
+		Button spotifyTrackButton = new Button("Search Track");
+		spotifyTrackButton.setId("spotifyTrackButton");
+		Button spotifyArtistButton = new Button("Search Artist");
+		spotifyArtistButton.setId("spotifyArtistButton");
+		Button spotifyAlbumButton = new Button("Search Album");
+		spotifyAlbumButton.setId("spotifyAlbumButton");
+		Button spotifyTop20Button = new Button("Spotify Top 20");
+		spotifyTop20Button.setId("spotifyTop20Button");
+		Button spotifyHomeButton = new Button("Home");
+		spotifyHomeButton.setId("spotifyHomeButton");
+
+		// SEARCH BUTTON IMAGE
+		Image searchIcon = new Image("images/searchIcon.png");
+		ImageView spotifySearchIcon = new ImageView(searchIcon);
+		spotifySearchIcon.setMouseTransparent(true);
+		spotifySearchIcon.setFitHeight(20);
+		spotifySearchIcon.setFitWidth(35);
+		spotifySearchIcon.setPreserveRatio(true);
+		spotifySearchIcon.setImage(searchIcon);
+
+		// SEARCH BOX CONTAINTS INPUT FIELD AND SEARCH BUTTON
+		Button spotifySearchButton = new Button();
+		spotifySearchButton.setId("spotifySearchButton");
+		spotifySearchButton.setGraphic(spotifySearchIcon);
+		HBox spotifySearchBox = new HBox(10);
 
 		// LAYOUT
 		GridPane spotifyLayout = new GridPane();
 		// LEFT MOST LIST OF CHOICES
 		VBox choicesBox = new VBox();
-		choicesBox.getChildren().addAll(trackButton, artistButton, albumButton, top20Button);
+		choicesBox.getChildren().addAll(spotifyTrackButton, spotifyArtistButton, spotifyAlbumButton, spotifyTop20Button, spotifyHomeButton);
 
 		// ADD CHOICE BOX TO LAYOUT
 		spotifyLayout.add(choicesBox, 0, 0);
@@ -113,10 +130,8 @@ public class GUI extends Application
 		spotifyInputFieldLabel.setId("spotifyInputFieldLabel");
 		Label spotifyTop20Label = new Label("    Spotify Top 20");
 		spotifyTop20Label.setId("spotifyTop20Label");
-		//spotifyTop20Label.setStyle("-fx-text-fill: white");
 		Label spotifyFillerLabel = new Label(" ");
 		spotifyFillerLabel.setId("spotifyFillerLabel");
-
 
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
 		TextField spotifyTrackInputField = new TextField();
@@ -134,6 +149,7 @@ public class GUI extends Application
 			top20[i] = (i+1) + ". Probably a Kendrick Lamar Song";
 		}
 
+		// TO DO: on each click, change to twitter scene with search completed for song clicked
 		Button top20_1 = new Button(top20[0]);
 		top20_1.setOnMouseEntered( e -> top20_1.setText("View tweets!") );
 		top20_1.setOnMouseExited( e -> top20_1.setText(top20[0]) );
@@ -194,54 +210,44 @@ public class GUI extends Application
 		Button top20_20 = new Button(top20[19]);
 		top20_20.setOnMouseEntered( e -> top20_20.setText("View tweets!") );
 		top20_20.setOnMouseExited( e -> top20_20.setText(top20[19]) );
-		top20_1.setId("top20TweetButton");
-		top20_2.setId("top20TweetButton");
-		top20_3.setId("top20TweetButton");
-		top20_4.setId("top20TweetButton");
-		top20_5.setId("top20TweetButton");
-		top20_6.setId("top20TweetButton");
-		top20_7.setId("top20TweetButton");
-		top20_8.setId("top20TweetButton");
-		top20_9.setId("top20TweetButton");
-		top20_10.setId("top20TweetButton");
-		top20_11.setId("top20TweetButton");
-		top20_12.setId("top20TweetButton");
-		top20_13.setId("top20TweetButton");
-		top20_14.setId("top20TweetButton");
-		top20_15.setId("top20TweetButton");
-		top20_16.setId("top20TweetButton");
-		top20_17.setId("top20TweetButton");
-		top20_18.setId("top20TweetButton");
-		top20_19.setId("top20TweetButton");
-		top20_20.setId("top20TweetButton");
+		top20_1.setId("top20TweetButton"); top20_2.setId("top20TweetButton"); top20_3.setId("top20TweetButton"); top20_4.setId("top20TweetButton"); top20_5.setId("top20TweetButton");
+		top20_6.setId("top20TweetButton"); top20_7.setId("top20TweetButton"); top20_8.setId("top20TweetButton"); top20_9.setId("top20TweetButton"); top20_10.setId("top20TweetButton");
+		top20_11.setId("top20TweetButton"); top20_12.setId("top20TweetButton"); top20_13.setId("top20TweetButton"); top20_14.setId("top20TweetButton"); top20_15.setId("top20TweetButton");
+		top20_16.setId("top20TweetButton"); top20_17.setId("top20TweetButton"); top20_18.setId("top20TweetButton"); top20_19.setId("top20TweetButton"); top20_20.setId("top20TweetButton");
 
 		// BUTTON ACTIONS (AFFECT MAIN DISPLAY BOX)
 		// CLEAR CHILDREN, UPDATE LABEL, ADD LABEL AND INPUT BOX TO MAIN DISPLAY BOX
-		trackButton.setOnAction( e -> {
+		spotifyTrackButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter a track name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyTrackInputField);
+			spotifySearchBox.getChildren().clear();
+			spotifySearchBox.getChildren().addAll(spotifyTrackInputField, spotifySearchButton);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox);
 
 			mainDisplayBox2.getChildren().clear();
 		} );
 
-		artistButton.setOnAction( e -> {
+		spotifyArtistButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter an artist name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyArtistInputField);
+			spotifySearchBox.getChildren().clear();
+			spotifySearchBox.getChildren().addAll(spotifyArtistInputField, spotifySearchButton);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox);
 
 			mainDisplayBox2.getChildren().clear();
 		} );
 
-		albumButton.setOnAction( e -> {
+		spotifyAlbumButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter an album name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyAlbumInputField);
+			spotifySearchBox.getChildren().clear();
+			spotifySearchBox.getChildren().addAll(spotifyAlbumInputField, spotifySearchButton);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox);
 
 			mainDisplayBox2.getChildren().clear();
 		} );
 
-		top20Button.setOnAction( e -> {
+		spotifyTop20Button.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			mainDisplayBox.getChildren().addAll(spotifyTop20Label, top20_1, top20_2, top20_3, top20_4, top20_5, top20_6, top20_7, top20_8, top20_9, top20_10);
 
@@ -249,16 +255,13 @@ public class GUI extends Application
 			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
 		} );
 
+		spotifyHomeButton.setOnAction(e -> window.setScene(welcomeScene));
+
 		// ADD MAIN DISPLAY BOX TO LAYOUT
 		spotifyLayout.add(mainDisplayBox, 1, 0);
 		spotifyLayout.add(mainDisplayBox2, 2, 0);
 
-		Button spotifyBackButton = new Button("B\nA\nC\nK");
-		spotifyBackButton.setId("spotifyBackButton");
-		spotifyBackButton.setOnAction(e -> window.setScene(welcomeScene));
 
-		// ADD BACK BUTTON TO LAYOUT
-		spotifyLayout.add(spotifyBackButton, 3, 0);
 
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
@@ -280,7 +283,7 @@ public class GUI extends Application
 		twitterSearchField.setId("twitterSearchField");
 
 		// SEARCH BUTTON IMAGE
-		Image searchIcon = new Image("images/searchIcon.png");
+		//Image searchIcon = new Image("images/searchIcon.png");
 		ImageView twitterSearchIcon = new ImageView(searchIcon);
 		twitterSearchIcon.setMouseTransparent(true);
 		twitterSearchIcon.setFitHeight(20);

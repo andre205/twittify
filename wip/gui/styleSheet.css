@@ -1,3 +1,7 @@
+/*----------------------------------------------*/
+/*----------------HOME PAGE---------------------*/
+/*----------------------------------------------*/
+
 @font-face {
 	src: url("Nunito-SemiBold.ttf");
 }
@@ -45,12 +49,16 @@
 	-fx-background-color: #16AC4C;
 }
 
-#trackButton, #artistButton, #albumButton, #top20Button {
+/*----------------------------------------------*/
+/*----------------SPOTIFY-----------------------*/
+/*----------------------------------------------*/
+
+#spotifyTrackButton, #spotifyArtistButton, #spotifyAlbumButton, #spotifyTop20Button, #spotifyHomeButton {
 	-fx-background-color: #1ED760;
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 250;
-	-fx-pref-height: 140;
+	-fx-pref-height: 112;
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-color: black;
 	-fx-border-width: .5px;
@@ -58,7 +66,7 @@
 	-fx-background-radius: 0 0 0 0;
 }
 
-#trackButton:hover, #artistButton:hover, #albumButton:hover, #top20Button:hover {
+#spotifyTrackButton:hover, #spotifyArtistButton:hover, #spotifyAlbumButton:hover, #spotifyTop20Button:hover, #spotifyHomeButton:hover {
 	-fx-background-color: #16AC4C;
 }
 
@@ -66,32 +74,12 @@
 	/*-fx-background-color: black;*/
 	-fx-font-size: 24;
 	-fx-text-fill: white;
-	-fx-pref-width: 350;
+	-fx-pref-width: 375;
 	-fx-pref-height: 600;
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
 	-fx-background-image: url("images/gradient.png");
-}
-
-#spotifyBackButton {
-	-fx-background-color: #000000;
-	-fx-font-size: 24; /*MAX SIZE*/
-	/*this rotates the whole button not just the text*/
-	/*-fx-rotate: -90;*/
-	-fx-text-fill: white;
-	-fx-pref-width: 50;
-	-fx-pref-height: 600;
-	/*-fx-transition: -fx-opacity 1s;*/
-	-fx-border-color: black;
-	-fx-border-width: .5px;
-	-fx-border-radius: 0 0 0 0;
-	-fx-background-radius: 0 0 0 0;
-	text-align: center;
-}
-
-#spotifyBackButton:hover {
-	-fx-background-color: #808080;
 }
 
 #top20TweetButton {
@@ -128,6 +116,18 @@
 	-fx-padding: 10px;
 	-fx-text-fill: transparent;
 }
+
+#spotifySearchButton {
+	-fx-background-color: #5d5d5d;
+}
+
+#spotifySearchButton:hover {
+	-fx-background-color: #444040;
+}
+
+/*----------------------------------------------*/
+/*----------------TWITER------------------------*/
+/*----------------------------------------------*/
 
 #twitterLayout {
 	-fx-background-color: #1DCAFF;
