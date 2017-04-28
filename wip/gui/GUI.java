@@ -110,6 +110,7 @@ public class GUI extends Application
 		mainDisplayBox2.setId("mainDisplayBox");
 
 		Label spotifyInputFieldLabel = new Label();
+		spotifyInputFieldLabel.setId("spotifyInputFieldLabel");
 		Label spotifyTop20Label = new Label("    Spotify Top 20");
 		spotifyTop20Label.setId("spotifyTop20Label");
 		//spotifyTop20Label.setStyle("-fx-text-fill: white");
@@ -118,9 +119,12 @@ public class GUI extends Application
 
 
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
-		TextField trackInputField = new TextField();
-		TextField artistInputField = new TextField();
-		TextField albumInputField = new TextField();
+		TextField spotifyTrackInputField = new TextField();
+		spotifyTrackInputField.setId("spotifyInputField");
+		TextField spotifyArtistInputField = new TextField();
+		spotifyArtistInputField.setId("spotifyInputField");
+		TextField spotifyAlbumInputField = new TextField();
+		spotifyAlbumInputField.setId("spotifyInputField");
 
 		// FETCH TOP 20 HERE WITH SPOTIFY CHART FETCHER
 		//ListView top20List = new ListView<>();
@@ -216,7 +220,7 @@ public class GUI extends Application
 		trackButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter a track name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, trackInputField);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyTrackInputField);
 
 			mainDisplayBox2.getChildren().clear();
 		} );
@@ -224,7 +228,7 @@ public class GUI extends Application
 		artistButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter an artist name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, artistInputField);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyArtistInputField);
 
 			mainDisplayBox2.getChildren().clear();
 		} );
@@ -232,7 +236,7 @@ public class GUI extends Application
 		albumButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
 			spotifyInputFieldLabel.setText("Enter an album name");
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, albumInputField);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifyAlbumInputField);
 
 			mainDisplayBox2.getChildren().clear();
 		} );

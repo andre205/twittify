@@ -50,7 +50,7 @@
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 250;
-	-fx-pref-height: 150;
+	-fx-pref-height: 140;
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-color: black;
 	-fx-border-width: .5px;
@@ -112,12 +112,20 @@
 	/*-fx-opacity: .5;*/
 }
 
-#spotifyTop20Label {
+#spotifyTop20Label, #spotifyInputFieldLabel {
 	-fx-font-size: 24;
+	-fx-padding: 10px;
+}
+
+#spotifyInputField {
+	-fx-translate-x: 10;
+	-fx-pref-width: 250;
+	-fx-pref-height: 50;
 }
 
 #spotifyFillerLabel, #twitterFillerLabel {
 	-fx-font-size: 24;
+	-fx-padding: 10px;
 	-fx-text-fill: transparent;
 }
 
@@ -125,7 +133,6 @@
 	-fx-background-color: #1DCAFF;
 	-fx-pref-width: 1000;
 	-fx-pref-height: 600;
-
 }
 
 #twitterSearchLabel {
