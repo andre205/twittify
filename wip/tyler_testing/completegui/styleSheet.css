@@ -1,0 +1,168 @@
+/*----------------------------------------------*/
+/*----------------HOME PAGE---------------------*/
+/*----------------------------------------------*/
+
+@font-face {
+	src: url("Nunito-SemiBold.ttf");
+}
+
+* {
+	-fx-font-family: 'Nunito Semibold';
+}
+
+.button, .label {
+	-fx-text-fill: white;
+}
+
+#titleLabel {
+	-fx-font-size: 100;
+	-fx-translate-x: -258;
+	-fx-translate-y: -185;
+	-fx-text-fill: black;
+}
+
+#twitterButton, #spotifyButton {
+	-fx-background-color: transparent;
+	-fx-text-fill: transparent;
+	-fx-pref-width: 500;
+	-fx-pref-height: 600;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+
+#twitterButton:hover {
+	-fx-background-color: #1DCAFF;
+	-fx-text-fill: white;
+}
+
+#twitterButton:pressed {
+	-fx-background-color: #17A3CF;
+}
+
+#spotifyButton:hover {
+	-fx-background-color: #1ED760;
+	-fx-text-fill: white;
+}
+
+#spotifyButton:pressed {
+	-fx-background-color: #16AC4C;
+}
+
+/*----------------------------------------------*/
+/*----------------SPOTIFY-----------------------*/
+/*----------------------------------------------*/
+
+#spotifyTrackButton, #spotifyArtistButton, #spotifyAlbumButton, #spotifyTop20Button, #spotifyHomeButton {
+	-fx-background-color: #1ED760;
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 250;
+	-fx-pref-height: 112;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+
+#spotifyTrackButton:hover, #spotifyArtistButton:hover, #spotifyAlbumButton:hover, #spotifyTop20Button:hover, #spotifyHomeButton:hover {
+	-fx-background-color: #16AC4C;
+}
+
+#mainDisplayBox {
+	/*-fx-background-color: black;*/
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 375;
+	-fx-pref-height: 600;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+	-fx-background-image: url("images/gradient.png");
+}
+
+#top20TweetButton {
+	-fx-background-color: transparent;
+	/*-fx-background-color: #1ED760;*/
+	-fx-pref-width: 300;
+	-fx-pref-height: 52;
+	-fx-font-size: 16;
+	-fx-border-color: transparent;
+	-fx-border-width: .5px;
+	/*-fx-opacity: 1;*/
+}
+
+#top20TweetButton:hover {
+	/*-fx-background-color: #1DCAFF;*/
+	-fx-border-color: #1DCAFF;
+	-fx-border-width: 3px;
+	/*-fx-opacity: .5;*/
+}
+
+#spotifyTop20Label, #spotifyInputFieldLabel {
+	-fx-font-size: 24;
+	-fx-padding: 10px;
+}
+
+#spotifyInputField {
+	-fx-translate-x: 10;
+	-fx-pref-width: 250;
+	-fx-pref-height: 50;
+}
+
+#spotifyFillerLabel, #twitterFillerLabel {
+	-fx-font-size: 24;
+	-fx-padding: 10px;
+	-fx-text-fill: transparent;
+}
+
+#spotifySearchButton {
+	-fx-background-color: #5d5d5d;
+}
+
+#spotifySearchButton:hover {
+	-fx-background-color: #444040;
+}
+
+/*----------------------------------------------*/
+/*----------------TWITER------------------------*/
+/*----------------------------------------------*/
+
+#twitterLayout {
+	-fx-background-color: #1DCAFF;
+	-fx-pref-width: 1000;
+	-fx-pref-height: 600;
+}
+
+#twitterSearchLabel {
+	-fx-font-size: 42;
+}
+
+#twitterSearchField {
+	/*-fx-translate-y: -200;*/
+}
+
+#twitterBackButton {
+	/*-fx-background-color: #1DCAFF;
+	-fx-font-size: 24; /*MAX SIZE*/*/
+	/*this rotates the whole button not just the text*/	/**/
+	/*-fx-rotate: -90;*/	/**/
+	/*-fx-text-fill: white;
+	-fx-pref-width: 50;
+	-fx-pref-height: 600;*/
+	/*-fx-transition: -fx-opacity 1s;*/	/**/
+	/*-fx-border-color: black;*/	/**/
+	/*-fx-border-width: .5px;*/	/**/
+	/*-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;*/
+}
+
+#twitterBackButton:hover {
+	-fx-background-color: #17A3CF;
+}
+
+#twitterSearchButton {
+	/*-fx-translate-y: -200;*/
+	-fx-background-color: #17A3CF;
+}

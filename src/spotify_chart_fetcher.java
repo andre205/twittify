@@ -37,8 +37,10 @@ public class spotify_chart_fetcher
 					        //System.out.println(s);
 
 									returnlist[i] = s;
+
+									//DECIDED TOP 20 WAS ENOUGH, CAN USE FULL 200 IF NEEDED
 									i++;
-									if (i == 21)
+									if (i == 20)
 									{
 										break;
 									}
@@ -48,8 +50,11 @@ public class spotify_chart_fetcher
 
 				catch (Exception e)
 				{
-						System.out.println("Sorry, Spotifycharts.com is offline.\nDisplaying cached list.");
-
+						System.out.println("Sorry, Spotifycharts.com is offline.");
+						for (int i = 0; i < 20; ++i)
+						{
+								returnlist[i] = "Chart not found";
+						}
 				}
 
 				return returnlist;

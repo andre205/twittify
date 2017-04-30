@@ -84,6 +84,7 @@
 
 #top20TweetButton {
 	-fx-background-color: transparent;
+	-fx-text-alignment: left;
 	/*-fx-background-color: #1ED760;*/
 	-fx-pref-width: 300;
 	-fx-pref-height: 52;
