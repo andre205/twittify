@@ -48,7 +48,8 @@ public class spotify_chart_fetcher
 
 				catch (Exception e)
 				{
-						System.out.println("Bad URL");
+						System.out.println("Sorry, Spotifycharts.com is offline.\nDisplaying cached list.");
+
 				}
 
 				return returnlist;
