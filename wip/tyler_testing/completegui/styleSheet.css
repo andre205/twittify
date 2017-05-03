@@ -81,8 +81,8 @@
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	/*-fx-background-image: url("images/gradient.png");*/
-	-fx-background-color: #1DCAFF;
+	-fx-background-image: url("images/gradient.png");
+
 }
 
 #mainDisplayBox2 {
@@ -164,7 +164,7 @@
 
 #twitterBackButton {
 	/*-fx-background-color: #1DCAFF;
-	-fx-font-size: 24; /*MAX SIZE*/*/
+	-fx-font-size: 24; /*MAX SIZE*/
 	/*this rotates the whole button not just the text*/	/**/
 	/*-fx-rotate: -90;*/	/**/
 	/*-fx-text-fill: white;
