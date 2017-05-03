@@ -317,8 +317,6 @@ public class GUI extends Application
 		spotifyLayout.add(mainDisplayBox, 1, 0);
 		spotifyLayout.add(mainDisplayBox2, 2, 0);
 
-
-
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
 		spotifyScene.getStylesheets().add("styleSheet.css");
@@ -364,23 +362,11 @@ public class GUI extends Application
 		twitterLayout.add(twitterFillerLabel, 1, 0);
 		// twitterLayout.add(twitterSearchBox, 0, 1);
 		// twitterLayout.add(twitterSearchButton, 1, 1);
-		twitterLayout.add(twitterSearchBox, 0, 1);
+		twitterLayout.add(twitterSearchBox, 0, 0);
 		twitterLayout.add(twitterBackButton, 2, 0);
 		twitterLayout.setId("twitterLayout");
 
 		twitterLayout.setAlignment(Pos.CENTER);
-
-		twitterSearchButton.setOnAction( e -> {
-			try
-			{
-				//List<String> test2 = tg.search(twitterSearchField.getText());
-
-			}
-			catch(Exception ee)
-			{
-
-			}
-		} );
 
 		twitterScene = new Scene(twitterLayout);
 		twitterScene.getStylesheets().add("styleSheet.css");
