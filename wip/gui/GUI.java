@@ -308,7 +308,7 @@ public class GUI extends Application
 		twitterLayout.add(twitterFillerLabel, 1, 0);
 		// twitterLayout.add(twitterSearchBox, 0, 1);
 		// twitterLayout.add(twitterSearchButton, 1, 1);
-		twitterLayout.add(twitterSearchBox, 0, 1);
+		twitterLayout.add(twitterSearchBox, 0, 0);
 		twitterLayout.add(twitterBackButton, 2, 0);
 		twitterLayout.setId("twitterLayout");
 
