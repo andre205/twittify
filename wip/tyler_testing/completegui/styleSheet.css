@@ -53,8 +53,56 @@
 /*----------------SPOTIFY-----------------------*/
 /*----------------------------------------------*/
 
-#spotifyTrackButton, #spotifyArtistButton, #spotifyAlbumButton, #spotifyTop20Button, #spotifyHomeButton {
-	-fx-background-color: #1ED760;
+#spotifyTrackButton {
+	-fx-background-color: #7EFF1B;
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 250;
+	-fx-pref-height: 112;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+#spotifyArtistButton {
+	-fx-background-color: #8AEE3E;
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 250;
+	-fx-pref-height: 112;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+#spotifyAlbumButton {
+	-fx-background-color: #ACF33F;
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 250;
+	-fx-pref-height: 112;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+#spotifyTop20Button {
+	-fx-background-color: #8AEE3E;
+	-fx-font-size: 24;
+	-fx-text-fill: white;
+	-fx-pref-width: 250;
+	-fx-pref-height: 112;
+	/*-fx-transition: -fx-opacity 1s;*/
+	-fx-border-color: black;
+	-fx-border-width: .5px;
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+#spotifyHomeButton {
+	-fx-background-color: #52E53B;
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 250;
@@ -66,7 +114,21 @@
 	-fx-background-radius: 0 0 0 0;
 }
 
-#spotifyTrackButton:hover, #spotifyArtistButton:hover, #spotifyAlbumButton:hover, #spotifyTop20Button:hover, #spotifyHomeButton:hover {
+#spotifyTrackButton:hover {
+-fx-background-color: #16AC4C;
+	}
+#spotifyArtistButton:hover{
+-fx-background-color: #16AC4C;
+	}
+#spotifyAlbumButton:hover {
+-fx-background-color: #16AC4C;
+}
+
+#spotifyTop20Button:hover{
+-fx-background-color: #16AC4C;
+}
+
+#spotifyHomeButton:hover {
 	-fx-background-color: #16AC4C;
 }
 
@@ -79,7 +141,7 @@
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	-fx-background-image: url("images/gradient.png");
+	-fx-background-color: #93E158;
 }
 
 #top20TweetButton {
