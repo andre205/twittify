@@ -81,8 +81,8 @@
 	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	/*-fx-background-image: url("images/gradient.png");*/
-	-fx-background-color: #1DCAFF;
+	-fx-background-image: url("images/gradient.png");
+
 }
 
 #mainDisplayBox2 {
@@ -156,25 +156,27 @@
 
 #twitterSearchLabel {
 	-fx-font-size: 42;
+	-fx-translate-y: -75
 }
 
 #twitterSearchField {
-	/*-fx-translate-y: -200;*/
+	-fx-translate-y: 275;
 }
 
 #twitterBackButton {
-	/*-fx-background-color: #1DCAFF;
-	-fx-font-size: 24; /*MAX SIZE*/*/
+	-fx-background-color: #1DCAFF;
+	-fx-font-size: 24; /*MAX SIZE*/
 	/*this rotates the whole button not just the text*/	/**/
 	/*-fx-rotate: -90;*/	/**/
-	/*-fx-text-fill: white;
+	-fx-text-fill: white;
 	-fx-pref-width: 50;
-	-fx-pref-height: 600;*/
+	-fx-pref-height: 600;
 	/*-fx-transition: -fx-opacity 1s;*/	/**/
 	/*-fx-border-color: black;*/	/**/
 	/*-fx-border-width: .5px;*/	/**/
-	/*-fx-border-radius: 0 0 0 0;
-	-fx-background-radius: 0 0 0 0;*/
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+	-fx-translate-x: 195
 }
 
 #twitterBackButton:hover {
@@ -182,6 +184,6 @@
 }
 
 #twitterSearchButton {
-	/*-fx-translate-y: -200;*/
+	-fx-translate-y: 275;
 	-fx-background-color: #17A3CF;
 }

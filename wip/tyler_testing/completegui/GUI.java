@@ -299,42 +299,23 @@ public class GUI extends Application
 		spotifySearchButton.setOnAction( e -> {
 			JSONObject spotifyJSON = sg.return_spotify_search(1, spotifyTrackInputField.getText());
 			sg.print_spotify_JSON(spotifyJSON);
-			String[] test = sg.return_spotify_JSON_string_array(spotifyJSON);
-			spotifyResultLabel1.setText(test[0]);
-			spotifyResultLabel2.setText(test[1]);
-			spotifyResultLabel3.setText(test[2]);
-			spotifyResultLabel4.setText(test[3]);
-			spotifyResultLabel5.setText(test[4]);
+			String[] JSON_strings = sg.return_spotify_JSON_string_array(spotifyJSON);
+			spotifyResultLabel1.setText(JSON_strings[0]);
+			spotifyResultLabel2.setText(JSON_strings[1]);
+			spotifyResultLabel3.setText(JSON_strings[2]);
+			spotifyResultLabel4.setText(JSON_strings[3]);
+			spotifyResultLabel5.setText(JSON_strings[4]);
 
-			spotifyResultLabel6.setText(test[5]);
-			spotifyResultLabel7.setText(test[6]);
-			spotifyResultLabel8.setText(test[7]);
-			spotifyResultLabel9.setText(test[8]);
-			spotifyResultLabel10.setText(test[9]);
-
-			//List<String> test = tg.search(twitterSearchField.getText());
-			try
-			{
-				String[] test2 = tg.search_return_string(spotifyTrackInputField.getText());
-				spotifyResultLabel1.setText(test2[0]);
-				spotifyResultLabel2.setText(test2[1]);
-				spotifyResultLabel3.setText(test2[2]);
-				spotifyResultLabel4.setText(test2[3]);
-				spotifyResultLabel5.setText(test2[4]);
-			}
-			catch(Exception ee)
-			{
-
-			}
-
-
+			spotifyResultLabel6.setText(JSON_strings[5]);
+			spotifyResultLabel7.setText(JSON_strings[6]);
+			spotifyResultLabel8.setText(JSON_strings[7]);
+			spotifyResultLabel9.setText(JSON_strings[8]);
+			spotifyResultLabel10.setText(JSON_strings[9]);
 		} );
 
 		// ADD MAIN DISPLAY BOX TO LAYOUT
 		spotifyLayout.add(mainDisplayBox, 1, 0);
 		spotifyLayout.add(mainDisplayBox2, 2, 0);
-
-
 
 		// CREATE SCENE FROM LAYOUT
 		spotifyScene = new Scene(spotifyLayout);
@@ -381,23 +362,11 @@ public class GUI extends Application
 		twitterLayout.add(twitterFillerLabel, 1, 0);
 		// twitterLayout.add(twitterSearchBox, 0, 1);
 		// twitterLayout.add(twitterSearchButton, 1, 1);
-		twitterLayout.add(twitterSearchBox, 0, 1);
+		twitterLayout.add(twitterSearchBox, 0, 0);
 		twitterLayout.add(twitterBackButton, 2, 0);
 		twitterLayout.setId("twitterLayout");
 
 		twitterLayout.setAlignment(Pos.CENTER);
-
-		twitterSearchButton.setOnAction( e -> {
-			try
-			{
-				//List<String> test2 = tg.search(twitterSearchField.getText());
-
-			}
-			catch(Exception ee)
-			{
-
-			}
-		} );
 
 		twitterScene = new Scene(twitterLayout);
 		twitterScene.getStylesheets().add("styleSheet.css");
