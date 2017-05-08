@@ -34,9 +34,9 @@ public class GUI extends Application
 		// DISABLES WINDOW RESIZING
 		window = primaryStage;
 		window.setMinWidth(1000);
-		window.setMinHeight(600);
+		window.setMinHeight(597);
 		window.setMaxWidth(1000);
-		window.setMaxHeight(600);
+		window.setMaxHeight(597);
 
 		// ------------------------------------------------------------------ //
 
