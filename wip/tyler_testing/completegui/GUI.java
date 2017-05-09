@@ -98,6 +98,28 @@ public class GUI extends Application
 
 		// ------------------------------------------------------------------ //
 
+
+		// DEFINING TWEET LABELS, SEARCH FIELD, AND SEARCH BUTTON EARLY BECAUSE THEY ARE MODIFIED ON SPOTIFY TOP 20 SIDE
+		// TWEET LABELS
+		Label tweetLabel1 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel1.setId("tweetLabel");
+		Label tweetLabel2 = new Label("@username: tweet tweet tweet tweet tweet tweet tweet"); 			tweetLabel2.setId("tweetLabel");
+		Label tweetLabel3 = new Label("@username: tweet tweet"); 										tweetLabel3.setId("tweetLabel");
+		Label tweetLabel4 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel4.setId("tweetLabel");
+		Label tweetLabel5 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel5.setId("tweetLabel");
+		Label tweetLabel6 = new Label("@username: tweet tweet tweet tweet"); 							tweetLabel6.setId("tweetLabel");
+		Label tweetLabel7 = new Label("@username: tweet"); 												tweetLabel7.setId("tweetLabel");
+		Label tweetLabel8 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel8.setId("tweetLabel");
+		Label tweetLabel9 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel9.setId("tweetLabel");
+
+		//SEARCH BUTTON DECLARATION (ADDITION DETAILS ADDED LATER)
+		Button twitterSearchButton = new Button();
+
+		// SEARCH FIELD
+		TextField twitterSearchField = new TextField();
+		twitterSearchField.setPromptText("Search");
+		twitterSearchField.setId("twitterSearchField");
+
+
 		// *** --- SPOTIFY SCENE --- *** //
 
 		// LEFT BUTTONS
@@ -150,28 +172,75 @@ public class GUI extends Application
 		spotifyFillerLabel.setId("spotifyFillerLabel");
 
 		// FOR BOX 1
-		Label spotifyResultLabel1 = new Label();
-		spotifyResultLabel1.setId("spotifyResultLabel");
-		Label spotifyResultLabel2 = new Label();
-		spotifyResultLabel2.setId("spotifyResultLabel");
-		Label spotifyResultLabel3 = new Label();
-		spotifyResultLabel3.setId("spotifyResultLabel");
-		Label spotifyResultLabel4 = new Label();
-		spotifyResultLabel4.setId("spotifyResultLabel");
-		Label spotifyResultLabel5 = new Label();
-		spotifyResultLabel5.setId("spotifyResultLabel");
-
+		Label spotifyTrackResultLabel1 = new Label();
+		spotifyTrackResultLabel1.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel2 = new Label();
+		spotifyTrackResultLabel2.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel3 = new Label();
+		spotifyTrackResultLabel3.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel4 = new Label();
+		spotifyTrackResultLabel4.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel5 = new Label();
+		spotifyTrackResultLabel5.setId("spotifyResultLabel");
 		// FOR BOX 2
-		Label spotifyResultLabel6 = new Label();
-		spotifyResultLabel1.setId("spotifyResultLabel");
-		Label spotifyResultLabel7 = new Label();
-		spotifyResultLabel2.setId("spotifyResultLabel");
-		Label spotifyResultLabel8 = new Label();
-		spotifyResultLabel3.setId("spotifyResultLabel");
-		Label spotifyResultLabel9 = new Label();
-		spotifyResultLabel4.setId("spotifyResultLabel");
-		Label spotifyResultLabel10 = new Label();
-		spotifyResultLabel5.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel6 = new Label();
+		spotifyTrackResultLabel6.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel7 = new Label();
+		spotifyTrackResultLabel7.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel8 = new Label();
+		spotifyTrackResultLabel8.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel9 = new Label();
+		spotifyTrackResultLabel9.setId("spotifyResultLabel");
+		Label spotifyTrackResultLabel10 = new Label();
+		spotifyTrackResultLabel10.setId("spotifyResultLabel");
+
+		// FOR BOX 1
+		Label spotifyArtistResultLabel1 = new Label();
+		spotifyArtistResultLabel1.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel2 = new Label();
+		spotifyArtistResultLabel2.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel3 = new Label();
+		spotifyArtistResultLabel3.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel4 = new Label();
+		spotifyArtistResultLabel4.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel5 = new Label();
+		spotifyArtistResultLabel5.setId("spotifyResultLabel");
+		// FOR BOX 2
+		Label spotifyArtistResultLabel6 = new Label();
+		spotifyArtistResultLabel6.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel7 = new Label();
+		spotifyArtistResultLabel7.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel8 = new Label();
+		spotifyArtistResultLabel8.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel9 = new Label();
+		spotifyArtistResultLabel9.setId("spotifyResultLabel");
+		Label spotifyArtistResultLabel10 = new Label();
+		spotifyArtistResultLabel10.setId("spotifyResultLabel");
+
+		// FOR BOX 1
+		Label spotifyAlbumResultLabel1 = new Label();
+		spotifyAlbumResultLabel1.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel2 = new Label();
+		spotifyAlbumResultLabel2.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel3 = new Label();
+		spotifyAlbumResultLabel3.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel4 = new Label();
+		spotifyAlbumResultLabel4.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel5 = new Label();
+		spotifyAlbumResultLabel5.setId("spotifyResultLabel");
+		// FOR BOX 2
+		Label spotifyAlbumResultLabel6 = new Label();
+		spotifyAlbumResultLabel6.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel7 = new Label();
+		spotifyAlbumResultLabel7.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel8 = new Label();
+		spotifyAlbumResultLabel8.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel9 = new Label();
+		spotifyAlbumResultLabel9.setId("spotifyResultLabel");
+		Label spotifyAlbumResultLabel10 = new Label();
+		spotifyAlbumResultLabel10.setId("spotifyResultLabel");
+
+
 
 
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
@@ -184,6 +253,7 @@ public class GUI extends Application
 
 		// TOP 20
 		String[] top20 = scf.getTop20();
+		String[] top20string = scf.getTop20();
 		String temp = "";
 		for (int i = 0; i < 20; ++i)
 		{
@@ -191,67 +261,187 @@ public class GUI extends Application
 			top20[i] = (i+1) + ". " + temp;
 		}
 
-		// TO DO: on each click, change to twitter scene with search completed for song clicked
+		// WHEN TOP 20 BUTTON IS CLICKED, SWITCH TO TWITTER SCENE, ENTER SONG NAME IN SEARCH FIELD, AND COMPLETE SEARCH
 		Button top20_1 = new Button(top20[0]);
 		top20_1.setOnMouseEntered( e -> top20_1.setText("View tweets!") );
 		top20_1.setOnMouseExited( e -> top20_1.setText(top20[0]) );
+		top20_1.setOnAction( e -> {
+				twitterSearchField.setText(top20string[0]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_2 = new Button(top20[1]);
 		top20_2.setOnMouseEntered( e -> top20_2.setText("View tweets!") );
 		top20_2.setOnMouseExited( e -> top20_2.setText(top20[1]) );
+		top20_2.setOnAction( e -> {
+				twitterSearchField.setText(top20string[1]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_3 = new Button(top20[2]);
 		top20_3.setOnMouseEntered( e -> top20_3.setText("View tweets!") );
 		top20_3.setOnMouseExited( e -> top20_3.setText(top20[2]) );
+		top20_3.setOnAction( e -> {
+				twitterSearchField.setText(top20string[2]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_4 = new Button(top20[3]);
 		top20_4.setOnMouseEntered( e -> top20_4.setText("View tweets!") );
 		top20_4.setOnMouseExited( e -> top20_4.setText(top20[3]) );
+		top20_4.setOnAction( e -> {
+				twitterSearchField.setText(top20string[3]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_5 = new Button(top20[4]);
 		top20_5.setOnMouseEntered( e -> top20_5.setText("View tweets!") );
 		top20_5.setOnMouseExited( e -> top20_5.setText(top20[4]) );
+		top20_5.setOnAction( e -> {
+				twitterSearchField.setText(top20string[4]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_6 = new Button(top20[5]);
 		top20_6.setOnMouseEntered( e -> top20_6.setText("View tweets!") );
 		top20_6.setOnMouseExited( e -> top20_6.setText(top20[5]) );
+		top20_6.setOnAction( e -> {
+				twitterSearchField.setText(top20string[5]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_7 = new Button(top20[6]);
 		top20_7.setOnMouseEntered( e -> top20_7.setText("View tweets!") );
 		top20_7.setOnMouseExited( e -> top20_7.setText(top20[6]) );
+		top20_7.setOnAction( e -> {
+				twitterSearchField.setText(top20string[6]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_8 = new Button(top20[7]);
 		top20_8.setOnMouseEntered( e -> top20_8.setText("View tweets!") );
 		top20_8.setOnMouseExited( e -> top20_8.setText(top20[7]) );
+		top20_8.setOnAction( e -> {
+				twitterSearchField.setText(top20string[7]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_9 = new Button(top20[8]);
 		top20_9.setOnMouseEntered( e -> top20_9.setText("View tweets!") );
 		top20_9.setOnMouseExited( e -> top20_9.setText(top20[8]) );
+		top20_9.setOnAction( e -> {
+				twitterSearchField.setText(top20string[8]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_10 = new Button(top20[9]);
 		top20_10.setOnMouseEntered( e -> top20_10.setText("View tweets!") );
 		top20_10.setOnMouseExited( e -> top20_10.setText(top20[9]) );
+		top20_10.setOnAction( e -> {
+				twitterSearchField.setText(top20string[9]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_11 = new Button(top20[10]);
 		top20_11.setOnMouseEntered( e -> top20_11.setText("View tweets!") );
 		top20_11.setOnMouseExited( e -> top20_11.setText(top20[10]) );
+		top20_11.setOnAction( e -> {
+				twitterSearchField.setText(top20string[10]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_12 = new Button(top20[11]);
 		top20_12.setOnMouseEntered( e -> top20_12.setText("View tweets!") );
 		top20_12.setOnMouseExited( e -> top20_12.setText(top20[11]) );
+		top20_12.setOnAction( e -> {
+				twitterSearchField.setText(top20string[11]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_13 = new Button(top20[12]);
 		top20_13.setOnMouseEntered( e -> top20_13.setText("View tweets!") );
 		top20_13.setOnMouseExited( e -> top20_13.setText(top20[12]) );
+		top20_13.setOnAction( e -> {
+				twitterSearchField.setText(top20string[12]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_14 = new Button(top20[13]);
 		top20_14.setOnMouseEntered( e -> top20_14.setText("View tweets!") );
 		top20_14.setOnMouseExited( e -> top20_14.setText(top20[13]) );
+		top20_14.setOnAction( e -> {
+				twitterSearchField.setText(top20string[13]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_15 = new Button(top20[14]);
 		top20_15.setOnMouseEntered( e -> top20_15.setText("View tweets!") );
 		top20_15.setOnMouseExited( e -> top20_15.setText(top20[14]) );
+		top20_15.setOnAction( e -> {
+				twitterSearchField.setText(top20string[14]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_16 = new Button(top20[15]);
 		top20_16.setOnMouseEntered( e -> top20_16.setText("View tweets!") );
 		top20_16.setOnMouseExited( e -> top20_16.setText(top20[15]) );
+		top20_16.setOnAction( e -> {
+				twitterSearchField.setText(top20string[15]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_17 = new Button(top20[16]);
 		top20_17.setOnMouseEntered( e -> top20_17.setText("View tweets!") );
 		top20_17.setOnMouseExited( e -> top20_17.setText(top20[16]) );
+		top20_17.setOnAction( e -> {
+				twitterSearchField.setText(top20string[16]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_18 = new Button(top20[17]);
 		top20_18.setOnMouseEntered( e -> top20_18.setText("View tweets!") );
 		top20_18.setOnMouseExited( e -> top20_18.setText(top20[17]) );
+		top20_18.setOnAction( e -> {
+				twitterSearchField.setText(top20string[17]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_19 = new Button(top20[18]);
 		top20_19.setOnMouseEntered( e -> top20_19.setText("View tweets!") );
 		top20_19.setOnMouseExited( e -> top20_19.setText(top20[18]) );
+		top20_19.setOnAction( e -> {
+				twitterSearchField.setText(top20string[18]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		Button top20_20 = new Button(top20[19]);
 		top20_20.setOnMouseEntered( e -> top20_20.setText("View tweets!") );
 		top20_20.setOnMouseExited( e -> top20_20.setText(top20[19]) );
+		top20_20.setOnAction( e -> {
+				twitterSearchField.setText(top20string[19]);
+				window.setScene(twitterScene);
+				twitterSearchButton.fire();
+		} );
+
 		top20_1.setId("top20TweetButton"); top20_2.setId("top20TweetButton"); top20_3.setId("top20TweetButton"); top20_4.setId("top20TweetButton"); top20_5.setId("top20TweetButton");
 		top20_6.setId("top20TweetButton"); top20_7.setId("top20TweetButton"); top20_8.setId("top20TweetButton"); top20_9.setId("top20TweetButton"); top20_10.setId("top20TweetButton");
 		top20_11.setId("top20TweetButton"); top20_12.setId("top20TweetButton"); top20_13.setId("top20TweetButton"); top20_14.setId("top20TweetButton"); top20_15.setId("top20TweetButton");
@@ -265,10 +455,10 @@ public class GUI extends Application
 			spotifyInputFieldLabel.setText("Enter a track name");
 			spotifySearchBox.getChildren().clear();
 			spotifySearchBox.getChildren().addAll(spotifyTrackInputField, spotifySearchButton);
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox, spotifyResultLabel1, spotifyResultLabel2, spotifyResultLabel3, spotifyResultLabel4, spotifyResultLabel5);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox, spotifyTrackResultLabel1, spotifyTrackResultLabel2, spotifyTrackResultLabel3, spotifyTrackResultLabel4, spotifyTrackResultLabel5);
 
 			mainDisplayBox2.getChildren().clear();
-			//mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, spotifyResultLabel6, spotifyResultLabel7, spotifyResultLabel8, spotifyResultLabel9, spotifyResultLabel10);
+			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, spotifyTrackResultLabel6, spotifyTrackResultLabel7, spotifyTrackResultLabel8, spotifyTrackResultLabel9, spotifyTrackResultLabel10);
 		} );
 
 		spotifyArtistButton.setOnAction( e -> {
@@ -276,9 +466,11 @@ public class GUI extends Application
 			spotifyInputFieldLabel.setText("Enter an artist name");
 			spotifySearchBox.getChildren().clear();
 			spotifySearchBox.getChildren().addAll(spotifyArtistInputField, spotifySearchButton);
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox, spotifyArtistResultLabel1, spotifyArtistResultLabel2, spotifyArtistResultLabel3, spotifyArtistResultLabel4, spotifyArtistResultLabel5);
 
 			mainDisplayBox2.getChildren().clear();
+			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, spotifyArtistResultLabel6, spotifyArtistResultLabel7, spotifyArtistResultLabel8, spotifyArtistResultLabel9, spotifyArtistResultLabel10);
+
 		} );
 
 		spotifyAlbumButton.setOnAction( e -> {
@@ -286,9 +478,11 @@ public class GUI extends Application
 			spotifyInputFieldLabel.setText("Enter an album name");
 			spotifySearchBox.getChildren().clear();
 			spotifySearchBox.getChildren().addAll(spotifyAlbumInputField, spotifySearchButton);
-			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox);
+			mainDisplayBox.getChildren().addAll(spotifyInputFieldLabel, spotifySearchBox, spotifyAlbumResultLabel1, spotifyAlbumResultLabel2, spotifyAlbumResultLabel3, spotifyAlbumResultLabel4, spotifyAlbumResultLabel5);
 
 			mainDisplayBox2.getChildren().clear();
+			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, spotifyAlbumResultLabel6, spotifyAlbumResultLabel7, spotifyAlbumResultLabel8, spotifyAlbumResultLabel9, spotifyAlbumResultLabel10);
+
 		} );
 
 		spotifyTop20Button.setOnAction( e -> {
@@ -302,20 +496,83 @@ public class GUI extends Application
 		spotifyHomeButton.setOnAction(e -> window.setScene(welcomeScene));
 
 		spotifySearchButton.setOnAction( e -> {
-			JSONObject spotifyJSON = sg.return_spotify_search(1, spotifyTrackInputField.getText());
-			sg.print_spotify_JSON(spotifyJSON);
-			String[] JSON_strings = sg.return_spotify_JSON_string_array(spotifyJSON);
-			spotifyResultLabel1.setText(JSON_strings[0]);
-			spotifyResultLabel2.setText(JSON_strings[1]);
-			spotifyResultLabel3.setText(JSON_strings[2]);
-			spotifyResultLabel4.setText(JSON_strings[3]);
-			spotifyResultLabel5.setText(JSON_strings[4]);
 
-			spotifyResultLabel6.setText(JSON_strings[5]);
-			spotifyResultLabel7.setText(JSON_strings[6]);
-			spotifyResultLabel8.setText(JSON_strings[7]);
-			spotifyResultLabel9.setText(JSON_strings[8]);
-			spotifyResultLabel10.setText(JSON_strings[9]);
+			if (spotifyTrackInputField.getText() != "")
+			{
+					try
+					{
+						JSONObject spotifyTrackJSON = sg.return_spotify_search(1, spotifyTrackInputField.getText());
+						//sg.print_spotify_JSON(spotifyTrackJSON);
+						String[] JSON_track_strings = sg.return_spotify_track_string_array(spotifyTrackJSON);
+						spotifyTrackResultLabel1.setText(JSON_track_strings[0]);
+						spotifyTrackResultLabel2.setText(JSON_track_strings[1]);
+						spotifyTrackResultLabel3.setText(JSON_track_strings[2]);
+						spotifyTrackResultLabel4.setText(JSON_track_strings[3]);
+						spotifyTrackResultLabel5.setText(JSON_track_strings[4]);
+
+						spotifyTrackResultLabel6.setText(JSON_track_strings[5]);
+						spotifyTrackResultLabel7.setText(JSON_track_strings[6]);
+						spotifyTrackResultLabel8.setText(JSON_track_strings[7]);
+						spotifyTrackResultLabel9.setText(JSON_track_strings[8]);
+						spotifyTrackResultLabel10.setText(JSON_track_strings[9]);
+					}
+
+					catch(Exception ex)
+					{
+
+					}
+			}
+
+			if (spotifyArtistInputField.getText() != "")
+			{
+					try
+					{
+						JSONObject spotifyArtistJSON = sg.return_spotify_search(2, spotifyArtistInputField.getText());
+						//sg.print_spotify_JSON(spotifyTrackJSON);
+						String[] JSON_artist_strings = sg.return_spotify_artist_string_array(spotifyArtistJSON);
+						spotifyArtistResultLabel1.setText(JSON_artist_strings[0]);
+						spotifyArtistResultLabel2.setText(JSON_artist_strings[1]);
+						spotifyArtistResultLabel3.setText(JSON_artist_strings[2]);
+						spotifyArtistResultLabel4.setText(JSON_artist_strings[3]);
+						spotifyArtistResultLabel5.setText(JSON_artist_strings[4]);
+
+						spotifyArtistResultLabel6.setText(JSON_artist_strings[5]);
+						spotifyArtistResultLabel7.setText(JSON_artist_strings[6]);
+						spotifyArtistResultLabel8.setText(JSON_artist_strings[7]);
+						spotifyArtistResultLabel9.setText(JSON_artist_strings[8]);
+						spotifyArtistResultLabel10.setText(JSON_artist_strings[9]);
+					}
+					catch(Exception ex)
+					{
+
+					}
+			}
+
+			if (spotifyAlbumInputField.getText() != "")
+			{
+					try
+					{
+						JSONObject spotifyAlbumJSON = sg.return_spotify_search(3, spotifyAlbumInputField.getText());
+						//sg.print_spotify_JSON(spotifyTrackJSON);
+						String[] JSON_album_strings = sg.return_spotify_album_string_array(spotifyAlbumJSON);
+						spotifyAlbumResultLabel1.setText(JSON_album_strings[0]);
+						spotifyAlbumResultLabel2.setText(JSON_album_strings[1]);
+						spotifyAlbumResultLabel3.setText(JSON_album_strings[2]);
+						spotifyAlbumResultLabel4.setText(JSON_album_strings[3]);
+						spotifyAlbumResultLabel5.setText(JSON_album_strings[4]);
+
+						spotifyAlbumResultLabel6.setText(JSON_album_strings[5]);
+						spotifyAlbumResultLabel7.setText(JSON_album_strings[6]);
+						spotifyAlbumResultLabel8.setText(JSON_album_strings[7]);
+						spotifyAlbumResultLabel9.setText(JSON_album_strings[8]);
+						spotifyAlbumResultLabel10.setText(JSON_album_strings[9]);
+					}
+					catch(Exception ex)
+					{
+
+					}
+			}
+
 		} );
 
 		// ADD MAIN DISPLAY BOX TO LAYOUT
@@ -336,10 +593,8 @@ public class GUI extends Application
 		Label twitterFillerLabel = new Label(" ");
 		twitterFillerLabel.setId("twitterFillerLabel");
 
-		// SEARCH FIELD
-		TextField twitterSearchField = new TextField();
-		twitterSearchField.setPromptText("Search");
-		twitterSearchField.setId("twitterSearchField");
+
+
 
 		// SEARCH BUTTON IMAGE
 		ImageView twitterSearchIcon = new ImageView(searchIcon);
@@ -350,15 +605,22 @@ public class GUI extends Application
 		twitterSearchIcon.setImage(searchIcon);
 
 		// SEARCH BUTTON
-		Button twitterSearchButton = new Button();
+
 		twitterSearchButton.setId("twitterSearchButton");
 		twitterSearchButton.setGraphic(twitterSearchIcon);
 		HBox twitterSearchBox = new HBox(10);
 		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
 		twitterSearchBox.setId("twitterSearchBox");
+
 		twitterSearchButton.setOnAction( e -> {
 			twitterLayout1.getChildren().clear();
+			twitterLayout2.getChildren().clear();
 			twitterLayout2.getChildren().addAll(twitterSearchBox, twitterTweetBox);
+
+			//VINCE - you can't declare a new scene on button click like this.
+			//it crashes if you click the button twice. I can't figure it out
+			//right now but declare this outside somewhere and just change the scene
+			//on click.
 			twitterScene = new Scene(twitterLayout2);
 
 			twitterSearchBox.setTranslateX(50);
@@ -366,6 +628,30 @@ public class GUI extends Application
 			// twitterTweetBox.setMouseTransparent(true);
 			// twitterBackButton2.setMouseTransparent(false);
 
+			if (twitterSearchField.getText() != "")
+			{
+				try
+				{
+					String[] tweet_strings = tg.search_return_string(twitterSearchField.getText());
+					tweetLabel1.setText(tweet_strings[0]);
+					tweetLabel2.setText(tweet_strings[1]);
+					tweetLabel3.setText(tweet_strings[2]);
+					tweetLabel4.setText(tweet_strings[3]);
+					tweetLabel5.setText(tweet_strings[4]);
+					tweetLabel6.setText(tweet_strings[5]);
+					tweetLabel7.setText(tweet_strings[6]);
+					tweetLabel8.setText(tweet_strings[7]);
+					tweetLabel9.setText(tweet_strings[8]);
+				}
+
+				catch (Exception ex)
+				{
+
+				}
+
+			}
+
+			twitterScene.getStylesheets().clear();
 			twitterScene.getStylesheets().add("styleSheet.css");
 			window.setScene(twitterScene);
 		} );
@@ -381,16 +667,6 @@ public class GUI extends Application
 		twitterBackButton2.setOnAction( e -> window.setScene(welcomeScene) ); // NEED TO REBUILD SCENE WITH PREVIOUS LAYOUT
 		twitterBackButton2.setId("twitterBackButton");
 
-		// TWEET LABELS
-		Label tweetLabel1 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel1.setId("tweetLabel");
-		Label tweetLabel2 = new Label("@username: tweet tweet tweet tweet tweet tweet tweet"); 			tweetLabel2.setId("tweetLabel");
-		Label tweetLabel3 = new Label("@username: tweet tweet"); 										tweetLabel3.setId("tweetLabel");
-		Label tweetLabel4 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel4.setId("tweetLabel");
-		Label tweetLabel5 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel5.setId("tweetLabel");
-		Label tweetLabel6 = new Label("@username: tweet tweet tweet tweet"); 							tweetLabel6.setId("tweetLabel");
-		Label tweetLabel7 = new Label("@username: tweet"); 												tweetLabel7.setId("tweetLabel");
-		Label tweetLabel8 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel8.setId("tweetLabel");
-		Label tweetLabel9 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel9.setId("tweetLabel");
 
 		// LAYOUT 2 - POST-SEARCH
 		twitterLayout2 = new VBox();
