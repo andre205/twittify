@@ -29,4 +29,25 @@ public class twitter_groundwork {
     }
     return tweets;
   }
+
+  public String[] search_return_string(String foofoo) throws TwitterException {
+    ConfigurationBuilder cb = new ConfigurationBuilder();
+    cb.setDebugEnabled(true)
+            .setOAuthConsumerKey("LGya8GWbitBpZMEYVTVSAmphb")
+            .setOAuthConsumerSecret("tbuFJ1r1pt0tAHPV1IkvI8Ouy28QOGZS8LJswKc4Sslcb1UbF7")
+            .setOAuthAccessToken("383855581-pSxjbbILvzuT28xY12xFStIRLKnbPKok02vzbVSC")
+            .setOAuthAccessTokenSecret("YlUoiGp120CAIbnhcuUzWjrXzya6w0Is1lwZNd8TLlt6w");
+
+    TwitterFactory tf = new TwitterFactory(cb.build());
+    twitter4j.Twitter twitter = tf.getInstance();
+    Query query = new Query(foofoo);
+    QueryResult result = twitter.search(query);
+    String[] tweets = new String[50];
+    int i =0;
+    for (Status status : result.getTweets()) {
+        tweets[i] = "@" + status.getUser().getScreenName() + "\n" + status.getText();
+        i++;
+    }
+    return tweets;
+  }
 }
