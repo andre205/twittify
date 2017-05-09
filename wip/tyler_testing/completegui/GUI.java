@@ -378,7 +378,7 @@ public class GUI extends Application
 
 		// BACK BUTTON - POST-SEARCH
 		twitterBackButton2 = new Button("B\nA\nC\nK");
-		twitterBackButton2.setOnAction( e -> window.setScene(twitterScene) ); // NEED TO REBUILD SCENE WITH PREVIOUS LAYOUT
+		twitterBackButton2.setOnAction( e -> window.setScene(welcomeScene) ); // NEED TO REBUILD SCENE WITH PREVIOUS LAYOUT
 		twitterBackButton2.setId("twitterBackButton");
 
 		// TWEET LABELS
