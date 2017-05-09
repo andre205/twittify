@@ -1,13 +1,13 @@
 # Project Twittify - Running Instructions
 ### PC
 #### In GIT Bash, compile and run using: ```./run.sh```
-If permission is denied, type the following command: ```chmod +x run.sh```
+If permission is denied, type the following command: ```chmod +x run.sh``` and try again.
 
 ---
 
 ### Mac/Linux
-#### Compile and run in terminal using: ```./mac.sh```
-If permission is denied, type the following command: ```chmod +x mac.sh```
+#### Compile and run in Terminal using: ```./mac.sh```
+If permission is denied, type the following command: ```chmod +x mac.sh``` and try again.
 
 ---
 
@@ -21,7 +21,7 @@ If permission is denied, type the following command: ```chmod +x mac.sh```
 
 # Project Description
 
-This application Implements Spotify and Twitter APIs to view tweets about songs, browse spotify charts, and discover new artists.
+This application implements Spotify and Twitter APIs to view tweets about songs, browse Spotify charts, and discover new artists.
 
 ---
 

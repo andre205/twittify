@@ -21,3 +21,6 @@ _Completed_ : The window is a bit cleaner with some more feature templates.
 _Next Goal_ : Redesign interface to add more color and life to application as well as implement Spotify data.
 
 ---
+
+__5/10__
+_Completed_ : User interface is complete with functionality and design on both sides of the application.
