@@ -15,7 +15,6 @@ import java.util.List;
 public class twittify extends Application
 {
 	GridPane welcomeLayout, twitterLayout1, tweetLayout;
-	VBox twitterLayout2;
 	HBox twitterTweetBox;
 	ColumnConstraints column1, column2, column3;
 	RowConstraints row1, row2, row3;
@@ -99,26 +98,25 @@ public class twittify extends Application
 		// ------------------------------------------------------------------ //
 
 
-		// DEFINING TWEET LABELS, SEARCH FIELD, AND SEARCH BUTTON EARLY BECAUSE THEY ARE MODIFIED ON SPOTIFY TOP 20 SIDE
+		// DEFINING TWEET LABELS, SEARCH BUTTON, AND SEARCH FIELD EARLY BECAUSE THEY ARE MODIFIED IN SPOTIFY TOP 20
 		// TWEET LABELS
-		Label tweetLabel1 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel1.setId("tweetLabel");
-		Label tweetLabel2 = new Label("@username: tweet tweet tweet tweet tweet tweet tweet"); 			tweetLabel2.setId("tweetLabel");
-		Label tweetLabel3 = new Label("@username: tweet tweet"); 										tweetLabel3.setId("tweetLabel");
-		Label tweetLabel4 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel4.setId("tweetLabel");
-		Label tweetLabel5 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel5.setId("tweetLabel");
-		Label tweetLabel6 = new Label("@username: tweet tweet tweet tweet"); 							tweetLabel6.setId("tweetLabel");
-		Label tweetLabel7 = new Label("@username: tweet"); 												tweetLabel7.setId("tweetLabel");
-		Label tweetLabel8 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel8.setId("tweetLabel");
-		Label tweetLabel9 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel9.setId("tweetLabel");
+		Label tweetLabel1 = new Label("No results found"); 	tweetLabel1.setId("tweetLabel");
+		Label tweetLabel2 = new Label("No results found"); 	tweetLabel2.setId("tweetLabel");
+		Label tweetLabel3 = new Label("No results found"); 	tweetLabel3.setId("tweetLabel");
+		Label tweetLabel4 = new Label("No results found"); 	tweetLabel4.setId("tweetLabel");
+		Label tweetLabel5 = new Label("No results found"); 	tweetLabel5.setId("tweetLabel");
+		Label tweetLabel6 = new Label("No results found"); 	tweetLabel6.setId("tweetLabel");
+		Label tweetLabel7 = new Label("No results found"); 	tweetLabel7.setId("tweetLabel");
+		Label tweetLabel8 = new Label("No results found"); 	tweetLabel8.setId("tweetLabel");
+		Label tweetLabel9 = new Label("No results found"); 	tweetLabel9.setId("tweetLabel");
 
-		//SEARCH BUTTON DECLARATION (ADDITION DETAILS ADDED LATER)
+		//SEARCH BUTTON
 		Button twitterSearchButton = new Button();
 
 		// SEARCH FIELD
 		TextField twitterSearchField = new TextField();
 		twitterSearchField.setPromptText("Search");
 		twitterSearchField.setId("twitterSearchField");
-
 
 		// *** --- SPOTIFY SCENE --- *** //
 
@@ -240,9 +238,6 @@ public class twittify extends Application
 		Label spotifyAlbumResultLabel10 = new Label();
 		spotifyAlbumResultLabel10.setId("spotifyResultLabel");
 
-
-
-
 		// MULTIPLE INPUT FIELDS SO TEXT IS STORED FOR EACH SEARCH TYPE
 		TextField spotifyTrackInputField = new TextField();
 		spotifyTrackInputField.setId("spotifyInputField");
@@ -251,7 +246,7 @@ public class twittify extends Application
 		TextField spotifyAlbumInputField = new TextField();
 		spotifyAlbumInputField.setId("spotifyInputField");
 
-		// TOP 20
+		// FETCH TOP 20, ADD NUMBERS FOR BUTTON CREATION
 		String[] top20 = scf.getTop20();
 		String[] top20string = scf.getTop20();
 		String temp = "";
@@ -448,7 +443,7 @@ public class twittify extends Application
 		top20_16.setId("top20TweetButton"); top20_17.setId("top20TweetButton"); top20_18.setId("top20TweetButton"); top20_19.setId("top20TweetButton"); top20_20.setId("top20TweetButton");
 
 		// BUTTON ACTIONS (AFFECT MAIN DISPLAY BOX)
-		// CLEAR CHILDREN, UPDATE LABEL, ADD LABEL AND INPUT BOX TO MAIN DISPLAY BOX
+		// CLEAR CHILDREN, UPDATE LABEL, ADD RESPECTIVE LABELS AND INPUT BOX TO MAIN DISPLAY BOX
 
 		spotifyTrackButton.setOnAction( e -> {
 			mainDisplayBox.getChildren().clear();
@@ -493,8 +488,10 @@ public class twittify extends Application
 			mainDisplayBox2.getChildren().addAll(spotifyFillerLabel, top20_11, top20_12, top20_13, top20_14, top20_15, top20_16, top20_17, top20_18, top20_19, top20_20);
 		} );
 
+		// HOME BUTTON
 		spotifyHomeButton.setOnAction(e -> window.setScene(welcomeScene));
 
+		// SEARCH BUTTON COMPLETES ALL SEARCHES (TRACK, ARTIST, ALBUM) IF POSSIBLE
 		spotifySearchButton.setOnAction( e -> {
 
 			if (spotifyTrackInputField.getText() != "")
@@ -502,7 +499,6 @@ public class twittify extends Application
 					try
 					{
 						JSONObject spotifyTrackJSON = sg.return_spotify_search(1, spotifyTrackInputField.getText());
-						//sg.print_spotify_JSON(spotifyTrackJSON);
 						String[] JSON_track_strings = sg.return_spotify_track_string_array(spotifyTrackJSON);
 						spotifyTrackResultLabel1.setText(JSON_track_strings[0]);
 						spotifyTrackResultLabel2.setText(JSON_track_strings[1]);
@@ -519,7 +515,7 @@ public class twittify extends Application
 
 					catch(Exception ex)
 					{
-
+						spotifyTrackResultLabel1.setText("Error searching track");
 					}
 			}
 
@@ -528,7 +524,6 @@ public class twittify extends Application
 					try
 					{
 						JSONObject spotifyArtistJSON = sg.return_spotify_search(2, spotifyArtistInputField.getText());
-						//sg.print_spotify_JSON(spotifyTrackJSON);
 						String[] JSON_artist_strings = sg.return_spotify_artist_string_array(spotifyArtistJSON);
 						spotifyArtistResultLabel1.setText(JSON_artist_strings[0]);
 						spotifyArtistResultLabel2.setText(JSON_artist_strings[1]);
@@ -544,7 +539,7 @@ public class twittify extends Application
 					}
 					catch(Exception ex)
 					{
-
+						spotifyArtistResultLabel1.setText("Error searching artist");
 					}
 			}
 
@@ -553,7 +548,6 @@ public class twittify extends Application
 					try
 					{
 						JSONObject spotifyAlbumJSON = sg.return_spotify_search(3, spotifyAlbumInputField.getText());
-						//sg.print_spotify_JSON(spotifyTrackJSON);
 						String[] JSON_album_strings = sg.return_spotify_album_string_array(spotifyAlbumJSON);
 						spotifyAlbumResultLabel1.setText(JSON_album_strings[0]);
 						spotifyAlbumResultLabel2.setText(JSON_album_strings[1]);
@@ -569,7 +563,7 @@ public class twittify extends Application
 					}
 					catch(Exception ex)
 					{
-
+						spotifyAlbumResultLabel1.setText("Error searching album");
 					}
 			}
 
@@ -587,15 +581,14 @@ public class twittify extends Application
 
 		// *** --- TWITTER SCENE --- *** //
 
+		// ACTUALY LABELS DEFINED AT LINE 108
 		// SEARCH TWITTER LABELS
 		Label twitterSearchLabel = new Label("Find something on Twitter...");
 		twitterSearchLabel.setId("twitterSearchLabel");
 		Label twitterFillerLabel = new Label(" ");
 		twitterFillerLabel.setId("twitterFillerLabel");
 
-
-
-
+		// ACTUAL SEARCH BUTTON DEFINED AT LINE 119
 		// SEARCH BUTTON IMAGE
 		ImageView twitterSearchIcon = new ImageView(searchIcon);
 		twitterSearchIcon.setMouseTransparent(true);
@@ -605,23 +598,17 @@ public class twittify extends Application
 		twitterSearchIcon.setImage(searchIcon);
 
 		// SEARCH BUTTON
-
 		twitterSearchButton.setId("twitterSearchButton");
 		twitterSearchButton.setGraphic(twitterSearchIcon);
 		HBox twitterSearchBox = new HBox(10);
 		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
 		twitterSearchBox.setId("twitterSearchBox");
 
+		// ON CLICK, CLEAR SCENE, REPOPULATE WITH TWEET BOXES, AND REFRESH
 		twitterSearchButton.setOnAction( e -> {
-			twitterLayout1.getChildren().clear();
-			twitterLayout2.getChildren().clear();
-			twitterLayout2.getChildren().addAll(twitterSearchBox, twitterTweetBox);
 
-			//VINCE - you can't declare a new scene on button click like this.
-			//it crashes if you click the button twice. I can't figure it out
-			//right now but declare this outside somewhere and just change the scene
-			//on click.
-			twitterScene = new Scene(twitterLayout2);
+			twitterLayout1.getChildren().clear();
+			twitterLayout1.getChildren().addAll(twitterSearchBox, twitterTweetBox);
 
 			twitterSearchBox.setTranslateX(50);
 			twitterSearchBox.setTranslateY(-250);
@@ -646,13 +633,14 @@ public class twittify extends Application
 
 				catch (Exception ex)
 				{
-
+					tweetLabel1.setText("Error fetching tweets");
 				}
 
 			}
 
 			twitterScene.getStylesheets().clear();
 			twitterScene.getStylesheets().add("styleSheet.css");
+
 			window.setScene(twitterScene);
 		} );
 
@@ -667,10 +655,7 @@ public class twittify extends Application
 		twitterBackButton2.setOnAction( e -> window.setScene(welcomeScene) ); // NEED TO REBUILD SCENE WITH PREVIOUS LAYOUT
 		twitterBackButton2.setId("twitterBackButton");
 
-
-		// LAYOUT 2 - POST-SEARCH
-		twitterLayout2 = new VBox();
-		twitterLayout2.setId("twitterLayout2");
+		// LAYOUT 2 - POST-SEARCH (VINCE I CHANGED THIS TO OVERWRITE THE INTIAL LAYOUT)
 		tweetLayout = new GridPane();
 		column1 = new ColumnConstraints(); column2 = new ColumnConstraints(); column3 = new ColumnConstraints();
 		column1.setPercentWidth(100/3); column2.setPercentWidth(100/3); column3.setPercentWidth(100/3);
@@ -679,6 +664,7 @@ public class twittify extends Application
 		tweetLayout.getColumnConstraints().addAll(column1, column2, column3);
 		tweetLayout.getRowConstraints().addAll(row1, row2, row3);
 
+		// POPULATE LAYOUT WITH TWEET LABELS
 		tweetLayout.add(tweetLabel1, 0, 0); tweetLayout.setHalignment(tweetLabel1, HPos.CENTER);
 		tweetLayout.add(tweetLabel2, 1, 0); tweetLayout.setHalignment(tweetLabel2, HPos.CENTER);
 		tweetLayout.add(tweetLabel3, 2, 0); tweetLayout.setHalignment(tweetLabel3, HPos.CENTER);
