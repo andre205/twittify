@@ -1,22 +1,28 @@
 import javafx.application.Application;
 import javafx.geometry.*;
-import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import org.json.JSONObject;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
-
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
+
 public class GUI extends Application
 {
-	GridPane welcomeLayout, twitterLayout;
+	GridPane welcomeLayout, twitterLayout1, tweetLayout;
+	VBox twitterLayout2;
+	HBox twitterTweetBox;
+	ColumnConstraints column1, column2, column3;
+	RowConstraints row1, row2, row3;
 	Stage window;
 	Scene welcomeScene, twitterScene, spotifyScene;
+
+	Button twitterBackButton2;
 
 	public static void main(String[] args)
 	{
@@ -25,11 +31,10 @@ public class GUI extends Application
 
 	public void start(Stage primaryStage) throws Exception
 	{
-		//API OBJECTS
+		// API OBJECTS
 		spotify_groundwork sg = new spotify_groundwork();
 		twitter_groundwork tg = new twitter_groundwork();
 		spotify_chart_fetcher scf = new spotify_chart_fetcher();
-
 
 		// DISABLES WINDOW RESIZING
 		window = primaryStage;
@@ -144,7 +149,7 @@ public class GUI extends Application
 		Label spotifyFillerLabel = new Label(" ");
 		spotifyFillerLabel.setId("spotifyFillerLabel");
 
-		//For box 1
+		// FOR BOX 1
 		Label spotifyResultLabel1 = new Label();
 		spotifyResultLabel1.setId("spotifyResultLabel");
 		Label spotifyResultLabel2 = new Label();
@@ -156,7 +161,7 @@ public class GUI extends Application
 		Label spotifyResultLabel5 = new Label();
 		spotifyResultLabel5.setId("spotifyResultLabel");
 
-		//for box 2
+		// FOR BOX 2
 		Label spotifyResultLabel6 = new Label();
 		spotifyResultLabel1.setId("spotifyResultLabel");
 		Label spotifyResultLabel7 = new Label();
@@ -331,13 +336,12 @@ public class GUI extends Application
 		Label twitterFillerLabel = new Label(" ");
 		twitterFillerLabel.setId("twitterFillerLabel");
 
-		// SEARCH FIELD AND BUTTON
+		// SEARCH FIELD
 		TextField twitterSearchField = new TextField();
 		twitterSearchField.setPromptText("Search");
 		twitterSearchField.setId("twitterSearchField");
 
 		// SEARCH BUTTON IMAGE
-		//Image searchIcon = new Image("images/searchIcon.png");
 		ImageView twitterSearchIcon = new ImageView(searchIcon);
 		twitterSearchIcon.setMouseTransparent(true);
 		twitterSearchIcon.setFitHeight(20);
@@ -345,35 +349,94 @@ public class GUI extends Application
 		twitterSearchIcon.setPreserveRatio(true);
 		twitterSearchIcon.setImage(searchIcon);
 
+		// SEARCH BUTTON
 		Button twitterSearchButton = new Button();
 		twitterSearchButton.setId("twitterSearchButton");
 		twitterSearchButton.setGraphic(twitterSearchIcon);
 		HBox twitterSearchBox = new HBox(10);
 		twitterSearchBox.getChildren().addAll(twitterSearchField, twitterSearchButton);
+		twitterSearchBox.setId("twitterSearchBox");
+		twitterSearchButton.setOnAction( e -> {
+			twitterLayout1.getChildren().clear();
+			twitterLayout2.getChildren().addAll(twitterSearchBox, twitterTweetBox);
+			twitterScene = new Scene(twitterLayout2);
 
-		// BACK BUTTON
+			twitterSearchBox.setTranslateX(50);
+			twitterSearchBox.setTranslateY(-250);
+			// twitterTweetBox.setMouseTransparent(true);
+			// twitterBackButton2.setMouseTransparent(false);
+
+			twitterScene.getStylesheets().add("styleSheet.css");
+			window.setScene(twitterScene);
+		} );
+
+		// BACK BUTTON - PRE-SEARCH
 		Button twitterBackButton = new Button("B\nA\nC\nK");
 		twitterBackButton.setOnAction( e -> window.setScene(welcomeScene) );
 		twitterBackButton.setId("twitterBackButton");
+		twitterBackButton.setTranslateX(195);
 
-		// LAYOUT
-		twitterLayout = new GridPane();
-		twitterLayout.add(twitterSearchLabel, 0, 0);
-		twitterLayout.add(twitterFillerLabel, 1, 0);
-		// twitterLayout.add(twitterSearchBox, 0, 1);
-		// twitterLayout.add(twitterSearchButton, 1, 1);
-		twitterLayout.add(twitterSearchBox, 0, 0);
-		twitterLayout.add(twitterBackButton, 2, 0);
-		twitterLayout.setId("twitterLayout");
+		// BACK BUTTON - POST-SEARCH
+		twitterBackButton2 = new Button("B\nA\nC\nK");
+		twitterBackButton2.setOnAction( e -> window.setScene(twitterScene) ); // NEED TO REBUILD SCENE WITH PREVIOUS LAYOUT
+		twitterBackButton2.setId("twitterBackButton");
 
-		twitterLayout.setAlignment(Pos.CENTER);
+		// TWEET LABELS
+		Label tweetLabel1 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel1.setId("tweetLabel");
+		Label tweetLabel2 = new Label("@username: tweet tweet tweet tweet tweet tweet tweet"); 			tweetLabel2.setId("tweetLabel");
+		Label tweetLabel3 = new Label("@username: tweet tweet"); 										tweetLabel3.setId("tweetLabel");
+		Label tweetLabel4 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel4.setId("tweetLabel");
+		Label tweetLabel5 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel5.setId("tweetLabel");
+		Label tweetLabel6 = new Label("@username: tweet tweet tweet tweet"); 							tweetLabel6.setId("tweetLabel");
+		Label tweetLabel7 = new Label("@username: tweet"); 												tweetLabel7.setId("tweetLabel");
+		Label tweetLabel8 = new Label("@username: tweet tweet tweet tweet tweet tweet"); 				tweetLabel8.setId("tweetLabel");
+		Label tweetLabel9 = new Label("@username: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"); 	tweetLabel9.setId("tweetLabel");
 
-		twitterScene = new Scene(twitterLayout);
+		// LAYOUT 2 - POST-SEARCH
+		twitterLayout2 = new VBox();
+		twitterLayout2.setId("twitterLayout2");
+		tweetLayout = new GridPane();
+		column1 = new ColumnConstraints(); column2 = new ColumnConstraints(); column3 = new ColumnConstraints();
+		column1.setPercentWidth(100/3); column2.setPercentWidth(100/3); column3.setPercentWidth(100/3);
+		row1 = new RowConstraints(); row2 = new RowConstraints(); row3 = new RowConstraints();
+		row1.setMaxHeight(135); row2.setMaxHeight(135); row3.setMaxHeight(135);
+		tweetLayout.getColumnConstraints().addAll(column1, column2, column3);
+		tweetLayout.getRowConstraints().addAll(row1, row2, row3);
+
+		tweetLayout.add(tweetLabel1, 0, 0); tweetLayout.setHalignment(tweetLabel1, HPos.CENTER);
+		tweetLayout.add(tweetLabel2, 1, 0); tweetLayout.setHalignment(tweetLabel2, HPos.CENTER);
+		tweetLayout.add(tweetLabel3, 2, 0); tweetLayout.setHalignment(tweetLabel3, HPos.CENTER);
+		tweetLayout.add(tweetLabel4, 0, 1); tweetLayout.setHalignment(tweetLabel4, HPos.CENTER);
+		tweetLayout.add(tweetLabel5, 1, 1); tweetLayout.setHalignment(tweetLabel5, HPos.CENTER);
+		tweetLayout.add(tweetLabel6, 2, 1); tweetLayout.setHalignment(tweetLabel6, HPos.CENTER);
+		tweetLayout.add(tweetLabel7, 0, 2); tweetLayout.setHalignment(tweetLabel7, HPos.CENTER);
+		tweetLayout.add(tweetLabel8, 1, 2); tweetLayout.setHalignment(tweetLabel8, HPos.CENTER);
+		tweetLayout.add(tweetLabel9, 2, 2); tweetLayout.setHalignment(tweetLabel9, HPos.CENTER);
+		tweetLayout.setHgap(35);
+		tweetLayout.setVgap(25);
+		tweetLayout.setAlignment(Pos.CENTER);
+		tweetLayout.setMouseTransparent(true);
+		tweetLayout.setId("tweetLayout");
+
+		twitterTweetBox = new HBox();
+		twitterTweetBox.getChildren().addAll(tweetLayout, twitterBackButton2);
+		twitterTweetBox.setId("twitterTweetBox");
+
+		// LAYOUT 1 - PRE-SEARCH
+		twitterLayout1 = new GridPane();
+		twitterLayout1.add(twitterSearchLabel, 0, 0);
+		twitterLayout1.add(twitterFillerLabel, 1, 0);
+		twitterLayout1.add(twitterSearchBox, 0, 0);
+		twitterLayout1.add(twitterBackButton, 2, 0);
+		twitterLayout1.setId("twitterLayout1");
+
+		twitterLayout1.setAlignment(Pos.CENTER);
+
+		twitterScene = new Scene(twitterLayout1);
 		twitterScene.getStylesheets().add("styleSheet.css");
 
 		// SHOW WELCOME SCENE ON START
 		window.setScene(welcomeScene);
 		window.show();
 	}
-
 }

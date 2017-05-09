@@ -78,26 +78,11 @@
 	-fx-background-color: #16AC4C;
 }
 
-#mainDisplayBox {
-	/*-fx-background-color: black;*/
+#mainDisplayBox, #mainDisplayBox2 {
 	-fx-font-size: 24;
 	-fx-text-fill: white;
 	-fx-pref-width: 375;
 	-fx-pref-height: 597;
-	/*-fx-transition: -fx-opacity 1s;*/
-	-fx-border-radius: 0 0 0 0;
-	-fx-background-radius: 0 0 0 0;
-	-fx-background-image: url("images/gradient.png");
-
-}
-
-#mainDisplayBox2 {
-	/*-fx-background-color: black;*/
-	-fx-font-size: 24;
-	-fx-text-fill: white;
-	-fx-pref-width: 375;
-	-fx-pref-height: 597;
-	/*-fx-transition: -fx-opacity 1s;*/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
 	-fx-background-image: url("images/gradient.png");
@@ -155,15 +140,19 @@
 /*----------------TWITTER-----------------------*/
 /*----------------------------------------------*/
 
-#twitterLayout {
-	-fx-background-color: #1DCAFF;
+#twitterLayout1, #twitterLayout2 {
 	-fx-pref-width: 1000;
 	-fx-pref-height: 597;
+	-fx-background-image: url("images/twitterGradient.png");
+}
+
+#tweetLayout {
+	-fx-translate-x: 5;
 }
 
 #twitterSearchLabel {
 	-fx-font-size: 42;
-	-fx-translate-y: -75
+	-fx-translate-y: -75;
 }
 
 #twitterSearchField {
@@ -171,10 +160,9 @@
 }
 
 #twitterBackButton {
-	-fx-background-color: #1DCAFF;
+	-fx-background-color: transparent;
+	-fx-opacity: 0.65;
 	-fx-font-size: 24; /*MAX SIZE*/
-	/*this rotates the whole button not just the text*/	/**/
-	/*-fx-rotate: -90;*/	/**/
 	-fx-text-fill: white;
 	-fx-pref-width: 50;
 	-fx-pref-height: 597;
@@ -183,14 +171,29 @@
 	/*-fx-border-width: .5px;*/	/**/
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	-fx-translate-x: 195
 }
 
 #twitterBackButton:hover {
-	-fx-background-color: #17A3CF;
+	-fx-opacity: 1;
+	-fx-background-color: transparent;
 }
 
 #twitterSearchButton {
 	-fx-translate-y: 275;
-	-fx-background-color: #17A3CF;
+	-fx-background-color: #1DCAFF;
+	-fx-opacity: 0.65;
+}
+
+#twitterSearchButton:hover {
+	-fx-background-color: #1DCAFF;
+	-fx-opacity: 1;
+}
+
+#tweetLabel {
+	-fx-font-size: 16;
+	-fx-text-fill: black;
+	-fx-background-radius: 10;
+	-fx-background-color: white;
+	-fx-wrap-text: true;
+	-fx-padding: 12;
 }
