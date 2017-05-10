@@ -34,17 +34,22 @@ Search Spotify for a track, artist, or album, as well as view the top 20 songs a
 ## Application Instructions
 #### 1. Choose to discover tweets or music.
 
-![alt text](https://github.com/andre205/twittify/tree/master/src/images/README/welcome_spotify.png "Welcome Screen")
+![](https://github.com/andre205/twittify/blob/master/src/images/README/welcome_spotify.png "Welcome Screen Spotify")
+
+![](https://github.com/andre205/twittify/blob/master/src/images/README/welcome_twitter.png "Welcome Screen Twitter")
 
 #### 2. Use the on screen buttons to search for tracks, artists, albums, tweets, or the spotify top 20
 
+![](https://github.com/andre205/twittify/blob/master/src/images/README/twitter_search.png "Welcome Screen Twitter")
+
+![](https://github.com/andre205/twittify/blob/master/src/images/README/spotify_top20.png "Welcome Screen Twitter")
 
 #### 3. Return to the home screen at any time by clicking 'BACK'
 
 
 ---
 
-Resources:<br>
+### Resources:<br>
 Spotify<br>
 https://developer.spotify.com/web-api/user-guide/<br>
 https://developer.spotify.com/web-api/search-item/<br>
