@@ -2,7 +2,7 @@
 
 ## Task: GUI Creation
 
-I am working on developing a GUI utilizing the JavaFX libraries.
+I worked on developing a GUI utilizing the JavaFX libraries.
 
 ---
 
