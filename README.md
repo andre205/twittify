@@ -27,7 +27,7 @@ This application implements Spotify and Twitter APIs to view tweets about songs,
 Query Twitter's web API for any search term and return up to 9 relevant tweets.
 
 ### Spotify
-Search Spotify for a track, artist, or album, as well as view the top 20 songs as seen on spotifycharts.com. Seamlessly view tweets pertaining to each song in the top 20 with a single click.
+Search Spotify for a track, artist, or album, as well as view the top 20 songs as seen on spotifycharts.com. Seemlessly view tweets pertaining to each song in the top 20 with a single click.
 
 ---
 
@@ -38,19 +38,19 @@ Search Spotify for a track, artist, or album, as well as view the top 20 songs a
 
 ![](https://github.com/andre205/twittify/blob/master/src/images/README/welcome_twitter.png "Welcome Screen Twitter")
 
-#### 2. Use the on-screen buttons to search for tracks, artists, albums, tweets, or the Spotify top 20.
+#### 2. Use the on screen buttons to search for tracks, artists, albums, tweets, or the spotify top 20
 
 ![](https://github.com/andre205/twittify/blob/master/src/images/README/twitter_search.png "Welcome Screen Twitter")
 
 ![](https://github.com/andre205/twittify/blob/master/src/images/README/spotify_top20.png "Welcome Screen Twitter")
 
-#### 3. Return to the home screen at any time by clicking 'BACK'.
+#### 3. Return to the home screen at any time by clicking 'BACK'
 
 
 ---
 
 ### Resources:<br>
-Spotify<br>
+Spotify Developer tools<br>
 https://developer.spotify.com/web-api/user-guide/<br>
 https://developer.spotify.com/web-api/search-item/<br>
 https://developer.spotify.com/web-api/authorization-guide/<br>

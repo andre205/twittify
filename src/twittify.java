@@ -129,7 +129,7 @@ public class twittify extends Application
 		spotifyAlbumButton.setId("spotifyAlbumButton");
 		Button spotifyTop20Button = new Button("Spotify Top 20");
 		spotifyTop20Button.setId("spotifyTop20Button");
-		Button spotifyHomeButton = new Button("Home");
+		Button spotifyHomeButton = new Button("BACK");
 		spotifyHomeButton.setId("spotifyHomeButton");
 
 		// SEARCH BUTTON IMAGE

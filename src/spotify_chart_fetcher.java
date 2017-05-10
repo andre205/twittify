@@ -50,10 +50,10 @@ public class spotify_chart_fetcher
 
 				catch (Exception e)
 				{
-						System.out.println("Sorry, Spotifycharts.com is offline.");
+						//System.out.println("Sorry, Spotifycharts.com is offline.");
 						for (int i = 0; i < 20; ++i)
 						{
-								returnlist[i] = "Chart not found";
+								returnlist[i] = "Spotifycharts.com is offline";
 						}
 				}
 
