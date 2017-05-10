@@ -22,6 +22,25 @@ If permission is denied, type the following command: ```chmod +x mac.sh``` and t
 # Project Description
 
 This application implements Spotify and Twitter APIs to view tweets about songs, browse Spotify charts, and discover new artists.
+# Application Features
+### Twitter
+Query Twitter's web API for any search term and return up to 9 relevant tweets.
+
+### Spotify
+Search Spotify for a track, artist, or album, as well as view the top 20 songs as seen on spotifycharts.com. Seemlessly view tweets pertaining to each song in the top 20 with a single click.
+
+---
+
+## Application Instructions
+#### 1. Choose to discover tweets or music.
+
+![alt text](https://github.com/andre205/twittify/tree/master/src/images/README/welcome_spotify.png "Welcome Screen")
+
+#### 2. Use the on screen buttons to search for tracks, artists, albums, tweets, or the spotify top 20
+
+
+#### 3. Return to the home screen at any time by clicking 'BACK'
+
 
 ---
 
