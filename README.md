@@ -13,7 +13,7 @@ If permission is denied, type the following command: ```chmod +x mac.sh``` and t
 
 ### Manually from within src folder
 #### Change to source directory:  ```cd src```
-#### Compile using: ```javac -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" \*.java```
+#### Compile using: ```javac -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" *.java```
 #### PC run using: ```java -cp ".;json/json.jar;csv/commons-csv-1.4.jar;twitter4j/twitter4j-core-4.0.4.jar;" twittify```
 #### Mac/Linux run using: ```java -cp ".:json/json.jar:csv/commons-csv-1.4.jar:twitter4j/twitter4j-core-4.0.4.jar" twittify```
 
